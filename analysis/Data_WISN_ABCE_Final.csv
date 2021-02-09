@@ -1,0 +1,1050 @@
+"","ABCE Facility ID","State","Year","Area","Region","Cadre","Facility","Cadre_Centre","HSA","CAF","IAF","WISN","WISN_round"
+"1",3,"OD","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.56416349809886,1.27053140096618,1.38403041825095,7.18294346172921,7
+"2",3,"OD","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.0866075200676,1.27053140096618,1.38403041825095,7.84672499688756,8
+"3",3,"OD","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.448563582594,1.27053140096618,1.38403041825095,8.30660154009744,8
+"4",3,"OD","2012","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.45991761723701,1.27053140096618,1.38403041825095,7.05049579667285,7
+"5",3,"OD","2013","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.77450359104352,1.27053140096618,1.38403041825095,7.45018715469754,7
+"6",8,"OD","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.11009188846641,1.2729912875121,1.4532319391635,4.1393605290312,4
+"7",8,"OD","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.59407477820025,1.2729912875121,1.4532319391635,3.48247524345521,4
+"8",8,"OD","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.44502534854246,1.2729912875121,1.4532319391635,3.29273661809219,3
+"9",8,"OD","2012","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.22644169835234,1.2729912875121,1.4532319391635,3.01448153580758,3
+"10",8,"OD","2013","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.12029467680608,1.2729912875121,1.4532319391635,4.15234858969593,4
+"11",11,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.42099704267005,1.26726630260199,0.0283903675538657,1.8291720358267,2
+"12",11,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.27544712012393,1.26726630260199,0.0283903675538657,1.64472152363767,2
+"13",11,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.30226024503591,1.26726630260199,0.0283903675538657,1.67870089330609,2
+"14",11,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.34233206590621,1.26726630260199,0.0283903675538657,1.72948256157892,2
+"15",11,"AP & TG","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.07346148429799,1.26726630260199,0.0283903675538657,1.38875193374582,2
+"16",15,"GJ","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.48676682861569,1.25039619651347,0.0709759188846641,1.93002350648812,2
+"17",15,"GJ","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.18197701028024,1.25039619651347,0.0709759188846641,1.54891547690544,2
+"18",15,"GJ","2012","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.18567367272215,1.25039619651347,0.0709759188846641,1.5535377695626,2
+"19",15,"GJ","2013","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.50469564145895,1.25039619651347,0.0709759188846641,1.95244162587533,2
+"20",15,"GJ","2014","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.67052175749894,1.25039619651347,0.0709759188846641,2.15978997065434,2
+"21",23,"MP","2008","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.03888536825799,1.27876823338736,0.106463878326996,1.43495748538624,2
+"22",23,"MP","2009","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.13130192930573,1.27876823338736,0.106463878326996,1.553136847893,2
+"23",23,"MP","2010","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.1487994648641,1.27876823338736,0.106463878326996,1.57551214052761,2
+"24",23,"MP","2011","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.18231587100408,1.27876823338736,0.106463878326996,1.61837185599672,2
+"25",23,"MP","2012","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.26795521757499,1.27876823338736,0.106463878326996,1.72788473191965,2
+"26",26,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.02967891846219,1.27053140096618,0.0304182509505703,2.60918905073586,3
+"27",26,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.86480777355302,1.27053140096618,0.0304182509505703,2.39971508401552,3
+"28",26,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.98859315589354,1.27053140096618,0.0304182509505703,2.55698829925975,3
+"29",26,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.94914448669202,1.27053140096618,0.0304182509505703,2.50686752631289,3
+"30",26,"AP & TG","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.39881706801859,1.27053140096618,0.0304182509505703,1.80765926007564,2
+"31",38,"AP & TG","2007","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.33416508238276,1.26442307692308,0.0266159695817491,2.97798816509457,3
+"32",38,"AP & TG","2009","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.7417221166033,1.26442307692308,0.0266159695817491,3.49331268432534,4
+"33",38,"GJ","2010","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.08194708491762,1.25837320574163,0.091254752851711,2.71112118028393,3
+"34",38,"AP & TG","2010","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.07590040135192,1.26442307692308,0.0266159695817491,3.91585541936808,4
+"35",38,"GJ","2011","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.90118029150824,1.25837320574163,0.091254752851711,2.48364909096973,3
+"36",38,"AP & TG","2011","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.54108576256865,1.26442307692308,0.0266159695817491,3.23962344821423,3
+"37",38,"GJ","2012","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.62242553865653,1.25837320574163,0.091254752851711,2.13287157900801,2
+"38",38,"GJ","2013","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.58048162230672,1.25837320574163,0.091254752851711,2.08009047852954,2
+"39",38,"GJ","2014","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.96906685678074,1.25837320574163,0.091254752851711,2.56907572573847,3
+"40",43,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",8.01473384030418,1.26442307692308,0.0266159695817491,10.1606303926587,10
+"41",43,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",9.69408137938319,1.26442307692308,0.0266159695817491,12.2840361752441,12
+"42",43,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",8.58452814744402,1.26442307692308,0.0266159695817491,10.8810914637057,11
+"43",43,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.67770384452894,1.26442307692308,0.0266159695817491,7.20563573453901,7
+"44",43,"AP & TG","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.57397945711872,1.26442307692308,0.0266159695817491,4.54563807161166,5
+"45",63,"GJ","2012","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.184278622729193,1.26442307692308,0.106463878326996,0.339470021489389,1
+"46",63,"GJ","2013","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.628062948880439,1.26442307692308,0.106463878326996,0.900601164651783,1
+"47",63,"GJ","2014","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.942140631601183,1.26442307692308,0.106463878326996,1.29772823463041,2
+"48",65,"OD","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.83536121673004,1.2729912875121,1.4532319391635,6.33561335252265,6
+"49",65,"OD","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.16722908745247,1.2729912875121,1.4532319391635,6.7580782605575,7
+"50",65,"OD","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.47364543726236,1.2729912875121,1.4532319391635,7.14814360421674,7
+"51",65,"OD","2012","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.19079531051965,1.2729912875121,1.4532319391635,6.78807785720157,7
+"52",65,"OD","2013","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.41355354879594,1.2729912875121,1.4532319391635,5.79865586623675,6
+"53",77,"AP & TG","2007","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.170891423743135,1.27053140096618,0.0304182509505703,0.247541170972041,1
+"54",77,"AP & TG","2008","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.214300802703845,1.27053140096618,0.0304182509505703,0.302694150038064,1
+"55",77,"AP & TG","2009","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.279890156316012,1.27053140096618,0.0304182509505703,0.386027483371397,1
+"56",77,"AP & TG","2010","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.426436417405999,1.27053140096618,0.0304182509505703,0.572219109780415,1
+"57",77,"AP & TG","2011","Semi/Peri-Urban","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",0.448880439374736,1.27053140096618,0.0304182509505703,0.60073494445567,1
+"58",92,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.25195395014787,1.27053140096618,0.0304182509505703,5.43265926007564,5
+"59",92,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.23109421208281,1.27053140096618,0.0304182509505703,6.67668770881423,7
+"60",92,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.61480777355302,1.27053140096618,0.0304182509505703,7.16420783763871,7
+"61",92,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.41677228559358,1.27053140096618,0.0304182509505703,5.64206613071439,6
+"62",107,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.73838191803971,1.27053140096618,0.0304182509505703,2.23908706469185,3
+"63",107,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",1.50464723278411,1.27053140096618,0.0304182509505703,1.94211980757966,2
+"64",107,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.12943599493029,1.27053140096618,0.0304182509505703,2.73593354885717,3
+"65",107,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.20933671313899,1.27053140096618,0.0304182509505703,2.83744992030108,3
+"66",107,"AP & TG","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",2.38022813688213,1.27053140096618,0.0304182509505703,3.05457284032255,3
+"67",121,"AP & TG","2007","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.48088297422898,1.27053140096618,0.0304182509505703,4.45298937279705,5
+"68",121,"AP & TG","2008","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",4.58592099704267,1.27053140096618,0.0304182509505703,5.85697488004343,6
+"69",121,"AP & TG","2009","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.3339670468948,1.27053140096618,0.0304182509505703,6.80739087574928,7
+"70",121,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",5.52994296577947,1.27053140096618,0.0304182509505703,7.05638443452545,7
+"71",121,"AP & TG","2011","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",6.59056822982678,1.27053140096618,0.0304182509505703,8.40394213715562,8
+"72",126,"AP & TG","2010","Rural","rural","Medical officer","Community Health Centre (CHC)","GDMO_CHC",3.24397972116603,1.27053140096618,0.0304182509505703,4.15199635078954,4
+"73",7,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.864279678918462,1.26726630260199,0,1.09527251311704,1
+"74",7,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.644895085199268,1.26726630260199,0,0.817253810186672,1
+"75",7,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.577172229263484,1.26726630260199,0,0.731430916943284,1
+"76",7,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.762301084354316,1.26726630260199,0,0.966038476639183,1
+"77",7,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.651302633431911,1.26726630260199,0,0.825373880144198,1
+"78",9,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.24947190536544,1.27053140096618,0,4.12855609232421,4
+"79",9,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.99065272496831,1.27053140096618,0,3.79971819645733,4
+"80",9,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.680027460921,1.27053140096618,0,3.4050590445518,4
+"81",9,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.95975918884664,1.27053140096618,0,3.76046698872786,4
+"82",9,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.25485847063794,1.27053140096618,0,4.13539989264627,4
+"83",12,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.21315219687368,1.26442307692308,0,1.53393763354701,2
+"84",12,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.34304367342628,1.26442307692308,0,1.69817541399573,2
+"85",12,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.60541429024081,1.26442307692308,0,2.02992287660256,2
+"86",12,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.53323695606253,1.26442307692308,0,1.93866018963675,2
+"87",12,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.837940959019856,1.26442307692308,0,1.05951188568376,1
+"88",14,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.0789501478665,1.27053140096618,0,3.91190284487386,4
+"89",14,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",4.2815800591466,1.27053140096618,0,5.4398819108964,5
+"90",14,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",4.34711660329531,1.27053140096618,0,5.52314814814815,6
+"91",14,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",4.25802703844529,1.27053140096618,0,5.40995705850778,5
+"92",18,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.162329689480355,1.26442307692308,0.279467680608365,0.484721086057083,1
+"93",18,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.151378326996198,1.26442307692308,0.279467680608365,0.470873930608365,1
+"94",18,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.20668963878327,1.26442307692308,0.279467680608365,0.540810829646827,1
+"95",18,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.236078105196451,1.26442307692308,0.279467680608365,0.577970284775032,1
+"96",18,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.420125686523025,1.26442307692308,0.279467680608365,0.810684293856228,1
+"97",20,"OD","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.264773447401774,1.26442307692308,0.0266159695817491,0.361401626633031,1
+"98",20,"OD","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.274246144909168,1.26442307692308,0.0266159695817491,0.373379123962091,1
+"99",20,"OD","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.364352291930714,1.26442307692308,0.0266159695817491,0.487311415628758,1
+"100",20,"OD","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.409728823405154,1.26442307692308,0.0266159695817491,0.544686549175766,1
+"101",20,"OD","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.327247042670047,1.26442307692308,0.0266159695817491,0.440394682188587,1
+"102",21,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.594146070975919,1.30845771144279,0.55893536121673,1.3363503695086,2
+"103",21,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.485371778622729,1.30845771144279,0.55893536121673,1.19402380787234,2
+"104",21,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.593129488804394,1.30845771144279,0.55893536121673,1.33502021472696,2
+"105",21,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.429274926066751,1.30845771144279,0.55893536121673,1.1206234485578,2
+"106",22,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.39786649767638,1.27053140096618,0,1.77603327965647,2
+"107",22,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.69233206590621,1.27053140096618,0,2.15016103059581,2
+"108",22,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.57625686523025,1.27053140096618,0,2.00268384326355,2
+"109",23,"TN","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.33286414156186,1.26115824419034,0,2.94211084470675,3
+"110",23,"TN","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.10135760943746,1.26115824419034,0,3.91130271732448,4
+"111",23,"TN","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.48170152091255,1.26115824419034,0,4.39097657690889,4
+"112",23,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.328032583438952,1.26442307692308,0.279467680608365,0.694239649091271,1
+"113",23,"TN","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.74530198888564,1.26115824419034,0,4.72341848026559,5
+"114",23,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.22018245669624,1.26442307692308,0.279467680608365,0.557871459988707,1
+"115",23,"TN","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.77149142049332,1.26115824419034,0,4.75644749784827,5
+"116",23,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.308116814533164,1.26442307692308,0.279467680608365,0.669057691292126,1
+"117",23,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.235985688635403,1.26442307692308,0.279467680608365,0.577853431142553,1
+"118",23,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.370220743557245,1.26442307692308,0.279467680608365,0.747583332317767,1
+"119",24,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.47581326573722,1.27053140096618,0,0.604535695115405,1
+"120",24,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.501003379805661,1.27053140096618,0,0.63654052603328,1
+"121",24,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.565272496831432,1.27053140096618,0,0.718196457326892,1
+"122",24,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.656844106463878,1.27053140096618,0,0.834541062801933,1
+"123",24,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.567912970004225,1.27053140096618,0,0.721551261406334,1
+"124",27,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",7.80692860160541,1.27053140096618,0,9.91894793344069,10
+"125",27,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",11.188371356147,1.27053140096618,0,14.2151771336554,14
+"126",27,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",6.52746092099704,1.27053140096618,0,8.29334406870639,8
+"127",27,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.70664343050275,1.27053140096618,0,2.16834406870639,2
+"128",27,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.2089670468948,1.27053140096618,0,1.5360305958132,2
+"129",28,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.13060592765916,1.26115824419034,0.257970166715414,0.42268490912289,1
+"130",28,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.854995369016282,1.26115824419034,0.257970166715414,1.33625462509486,2
+"131",29,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.404098014364174,1.27053140096618,0,0.513419216317767,1
+"132",29,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.4147127165188,1.27053140096618,0,0.526905528717123,1
+"133",29,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.450042247570765,1.27053140096618,0,0.571792807300054,1
+"134",29,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.508238276299113,1.27053140096618,0,0.64573268921095,1
+"135",30,"GJ","2010","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.00802703844529,1.27053140096618,0.319391634980989,1.60012164034868,2
+"136",30,"GJ","2011","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.06796577946768,1.27053140096618,0.319391634980989,1.676275692952,2
+"137",30,"GJ","2012","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.15082382762991,1.27053140096618,0.319391634980989,1.78154944496489,2
+"138",30,"GJ","2013","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.05645331643431,1.27053140096618,0.319391634980989,1.66164874716564,2
+"139",30,"GJ","2014","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.2301436417406,1.27053140096618,0.319391634980989,1.88232775951132,2
+"140",33,"GJ","2010","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.82319391634981,1.27053140096618,0.319391634980989,1.36528535478775,2
+"141",33,"GJ","2011","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.843208702999578,1.27053140096618,0.319391634980989,1.39071476970992,2
+"142",33,"GJ","2012","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.852608787494719,1.27053140096618,0.319391634980989,1.40265787223273,2
+"143",33,"GJ","2013","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.778358681875792,1.27053140096618,0.319391634980989,1.30832078151883,2
+"144",33,"GJ","2014","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.863487536966624,1.27053140096618,0.319391634980989,1.41647966504003,2
+"145",35,"OD","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.269342040006613,1.26627590537995,0.0277731856505207,0.368834521216776,1
+"146",35,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.73657086408708,1.28219099512475,0.394542607917692,1.3389671371214,2
+"147",35,"OD","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.282794676806084,1.26627590537995,0.0277731856505207,0.385869271059773,1
+"148",35,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.63800044732722,1.28219099512475,0.394542607917692,1.21258103636622,2
+"149",35,"OD","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.29889926709649,1.26627590537995,0.0277731856505207,0.406262125710531,1
+"150",35,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.568068291955566,1.28219099512475,0.394542607917692,1.12291465647901,2
+"151",35,"OD","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.317221854852042,1.26627590537995,0.0277731856505207,0.429463577109595,1
+"152",35,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.887394691716991,1.28219099512475,0.394542607917692,1.53235209075872,2
+"153",35,"OD","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.32995123160853,1.26627590537995,0.0277731856505207,0.445582480186841,1
+"154",35,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.09314657421904,1.28219099512475,0.394542607917692,1.79616530173281,2
+"155",39,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.29910619983101,1.26442307692308,0,0.378196781517094,1
+"156",39,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.285798215040135,1.26442307692308,0,0.361369858440171,1
+"157",39,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.600285171102662,1.25837320574163,0.239543726235741,0.994926501355359,1
+"158",39,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.293930872412336,1.26442307692308,0,0.371652978098291,1
+"159",39,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.573233523447402,1.25837320574163,0.239543726235741,0.960885432774816,1
+"160",39,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.264449989438107,1.26442307692308,0,0.334376669337607,1
+"161",39,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.58178865652725,1.25837320574163,0.239543726235741,0.971650983014051,1
+"162",39,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.10321609632446,1.25837320574163,0.239543726235741,1.62780130199332,2
+"163",39,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.999762357414449,1.25837320574163,0.239543726235741,1.49761788891517,2
+"164",41,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.572137727080693,1.27053140096618,0,0.726918947933441,1
+"165",41,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.603136882129278,1.27053140096618,0,0.766304347826087,1
+"166",41,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.600971694127588,1.27053140096618,0,0.763553408480945,1
+"167",41,"GJ","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.408850866075201,1.27053140096618,0.319391634980989,0.838849498641751,1
+"168",41,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.629119138149556,1.27053140096618,0,0.799315619967794,1
+"169",41,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.311575834389523,1.27053140096618,0.319391634980989,0.715258516355116,1
+"170",41,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.627376425855513,1.27053140096618,0,0.797101449275362,1
+"171",41,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.370933671313899,1.27053140096618,0.319391634980989,0.790674512060967,1
+"172",41,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.26145965356992,1.27053140096618,0.319391634980989,0.651584334927312,1
+"173",44,"OD","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.63501267427123,1.2729912875121,0.0319391634980989,0.840304765305134,1
+"174",44,"OD","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.983737325728771,1.2729912875121,0.0319391634980989,1.28422820835128,2
+"175",44,"OD","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.08781685678074,1.2729912875121,0.0319391634980989,1.41672054458877,2
+"176",44,"OD","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.776299112801014,1.2729912875121,0.0319391634980989,1.02016117059716,1
+"177",44,"OD","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.575625792141952,1.2729912875121,0.0319391634980989,0.764705781762055,1
+"178",46,"GJ","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.147734474017744,1.25837320574163,0.239543726235741,0.425448829904003,1
+"179",46,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.202709125475285,1.25837320574163,0.239543726235741,0.494627458293158,1
+"180",46,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.296855196451204,1.25837320574163,0.239543726235741,0.613098351435103,1
+"181",46,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.389298162230672,1.25837320574163,0.239543726235741,0.729426102631276,1
+"182",55,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.405999155048585,1.27053140096618,0,0.515834675254965,1
+"183",55,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.305555555555556,1.27053140096618,0,0.388217928073001,1
+"184",55,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.312737642585551,1.27053140096618,0,0.397342995169082,1
+"185",55,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.271599070553443,1.27053140096618,0,0.34507514761138,1
+"186",55,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.252323616392057,1.27053140096618,0,0.320585077831455,1
+"187",57,"AP & TG","2007","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.305713983945923,1.27876823338736,0,0.390937331172339,1
+"188",57,"AP & TG","2008","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.363689973243205,1.27876823338736,0,0.465075184584909,1
+"189",57,"AP & TG","2009","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.43300239402901,1.27876823338736,0,0.553709706464974,1
+"190",57,"AP & TG","2010","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.408604421912407,1.27876823338736,0,0.522510354763191,1
+"191",57,"AP & TG","2011","Semi/Peri-Urban","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.43096922968596,1.27876823338736,0,0.551109760489826,1
+"192",60,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.11577946768061,1.28042843232717,0,1.42867575462512,2
+"193",61,"OD","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.482883640440675,1.26115824419034,0.0245685873062299,0.633561271432629,1
+"194",61,"OD","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.423893438627279,1.26115824419034,0.0245685873062299,0.559165292089213,1
+"195",61,"OD","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.393523934873745,1.26115824419034,0.0245685873062299,0.520864542058474,1
+"196",61,"OD","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.452386175294921,1.26115824419034,0.0245685873062299,0.595099141837153,1
+"197",61,"OD","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.481476065126255,1.26115824419034,0.0245685873062299,0.63178609622053,1
+"198",68,"TN","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.402249683143219,1.27053140096618,0,0.511070853462158,1
+"199",68,"TN","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.820975918884664,1.27053140096618,0,1.04307568438003,1
+"200",68,"TN","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.482467258132657,1.27053140096618,0,0.612989801395599,1
+"201",68,"TN","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.51145965356992,1.27053140096618,0,0.649825550187869,1
+"202",68,"TN","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.529467680608365,1.27053140096618,0,0.672705314009662,1
+"203",70,"TN","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.41302281368821,1.25837320574163,0,3.03648325358852,3
+"204",70,"TN","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.11759347275032,1.25837320574163,0,3.92309609250399,4
+"205",70,"TN","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.10333491761724,1.25837320574163,0,3.90515350877193,4
+"206",70,"TN","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",2.86660329531052,1.25837320574163,0,3.60725677830941,4
+"207",70,"TN","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",3.08044201520913,1.25837320574163,0,3.8763456937799,4
+"208",77,"GJ","2012","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.744642239889388,1.26830337571241,0.304873833390944,1.2493060999407,2
+"209",77,"GJ","2013","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.810274801244383,1.26830337571241,0.304873833390944,1.33254809906389,2
+"210",77,"GJ","2014","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.854785977647194,1.26830337571241,0.304873833390944,1.38900177435251,2
+"211",78,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.196556822982678,1.27053140096618,0,0.249731615673645,1
+"212",78,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.245088719898606,1.27053140096618,0,0.311392914653784,1
+"213",78,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.257393324883819,1.27053140096618,0,0.327026301663983,1
+"214",78,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.24566962399662,1.27053140096618,0,0.312130971551261,1
+"215",78,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.264997887621462,1.27053140096618,0,0.336688137412775,1
+"216",83,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.168145331643431,1.27053140096618,0,0.213633923778851,1
+"217",83,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.262991128010139,1.27053140096618,0,0.334138486312399,1
+"218",93,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.104668356569497,1.27053140096618,0,0.132984433709071,1
+"219",98,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.0439902830587241,1.27053140096618,0,0.0558910359634997,1
+"220",98,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.0452577101816646,1.27053140096618,0,0.0575013419216318,1
+"221",98,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.0458914237431348,1.27053140096618,0,0.0583064949006978,1
+"222",98,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.0478981833544571,1.27053140096618,0,0.0608561460010735,1
+"223",98,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.0482150401351922,1.27053140096618,0,0.0612587224906066,1
+"224",100,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.173188635403464,1.26442307692308,0,0.218983707264957,1
+"225",100,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.15188661808196,1.26442307692308,0,0.192048944978632,1
+"226",100,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.144169835234474,1.26442307692308,0,0.182291666666667,1
+"227",108,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.66555766793409,1.27053140096618,0,2.11614331723027,2
+"228",108,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.64702154626109,1.27053140096618,0,2.09259259259259,2
+"229",108,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.2716518800169,1.27053140096618,0,1.61567364465915,2
+"230",108,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.28934305027461,1.27053140096618,0,1.63815083199141,2
+"231",108,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",1.60097169412759,1.27053140096618,0,2.03408480944713,2
+"232",113,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.698462876175318,1.26939050398473,0,0.886622142402814,1
+"233",115,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.452999577524292,1.27053140096618,0,0.575550187869029,1
+"234",115,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.425644275454161,1.27053140096618,0,0.540794417606012,1
+"235",115,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.381865230249261,1.27053140096618,0,0.485171765968867,1
+"236",115,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.362325728770596,1.27053140096618,0,0.460346215780998,1
+"237",115,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.404626108998733,1.27053140096618,0,0.514090177133655,1
+"238",127,"AP & TG","2007","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.366814533164343,1.27053140096618,0,0.46604938271605,1
+"239",127,"AP & TG","2008","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.369085340092945,1.27053140096618,0,0.468934514224369,1
+"240",127,"AP & TG","2009","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.286016054076891,1.27053140096618,0,0.363392377885132,1
+"241",127,"AP & TG","2010","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.293620616814533,1.27053140096618,0,0.373054213633924,1
+"242",127,"AP & TG","2011","Rural","rural","Medical officer","Primary Health Centre (PHC)","Doctor_PHC",0.458386142796789,1.27053140096618,0,0.58239398819109,1
+"243",3,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",6.92823854034643,1.02334630350195,74.7376425855513,81.8276298855946,82
+"244",3,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",7.72061813476975,1.02334630350195,74.7376425855513,82.6385086145181,83
+"245",3,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",8.2226711026616,1.02334630350195,74.7376425855513,83.1522826633723,83
+"246",3,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",6.72187235952683,1.02334630350195,74.7376425855513,81.616445817285,82
+"247",3,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",7.19684727503169,1.02334630350195,74.7376425855513,82.1025096413231,82
+"248",8,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.74409062103929,1.02334630350195,89.6851711026616,93.5166723996785,94
+"249",8,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.87535646387833,1.02334630350195,89.6851711026616,92.6276565112219,93
+"250",8,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.59139733840304,1.02334630350195,89.6851711026616,92.3370679898212,92
+"251",8,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.2517664765526,1.02334630350195,89.6851711026616,91.9895080027913,92
+"252",8,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.9402170468948,1.02334630350195,89.6851711026616,93.7173776525968,94
+"253",15,"GJ","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.72240045416139,1.02334630350195,37.7148288973384,41.5241336422584,42
+"254",15,"GJ","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.05847987959442,1.02334630350195,37.7148288973384,40.8447129764564,41
+"255",15,"GJ","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.10006733206591,1.02334630350195,37.7148288973384,40.8872713422152,41
+"256",15,"GJ","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.88597776721589,1.02334630350195,37.7148288973384,41.6915298809095,42
+"257",15,"GJ","2014","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.34196107942543,1.02334630350195,37.7148288973384,42.1581587179177,42
+"258",23,"MP","2008","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.61487114490917,1.1034965034965,51.6704689480355,54.5559701135367,55
+"259",23,"MP","2009","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.77443141811013,1.1034965034965,51.6704689480355,54.7320443171109,55
+"260",23,"MP","2010","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.77795556963808,1.1034965034965,51.6704689480355,54.7359332059997,55
+"261",23,"MP","2011","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.91633396704689,1.1034965034965,51.6704689480355,54.8886332836998,55
+"262",23,"MP","2012","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.07334354316294,1.1034965034965,51.6704689480355,55.0618928019593,55
+"263",29,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.62538388417666,1.02334630350195,68.9885931558935,71.6752700490393,72
+"264",29,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.84790874524715,1.02334630350195,68.9885931558935,71.9029900430531,72
+"265",29,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.08113970946671,1.02334630350195,68.9885931558935,72.1416660881493,72
+"266",29,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.84901774397972,1.02334630350195,68.9885931558935,71.9041249328066,72
+"267",29,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.45719996100224,1.02334630350195,68.9885931558935,71.5031596529503,72
+"268",38,"AP & TG","2007","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.56487642585551,1.02334630350195,12.4562737642586,16.104376877099,16
+"269",38,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",7.95498653358682,1.02334630350195,74.7376425855513,82.8783486491052,83
+"270",38,"AP & TG","2009","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.82238857203211,1.02334630350195,12.4562737642586,17.3912472834976,17
+"271",38,"GJ","2010","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.1279309252218,1.02334630350195,32.3269961977186,36.5512990511557,37
+"272",38,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",6.59161121673004,1.02334630350195,74.7376425855513,81.483143558314,81
+"273",38,"AP & TG","2010","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",5.62045178495986,1.02334630350195,12.4562737642586,18.2079423224081,18
+"274",38,"GJ","2011","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.80632129277567,1.02334630350195,32.3269961977186,36.2221810226213,36
+"275",38,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",7.55006337135615,1.02334630350195,74.7376425855513,82.4639720278341,82
+"276",38,"AP & TG","2011","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.88546287494719,1.02334630350195,12.4562737642586,17.4557941382318,17
+"277",38,"GJ","2012","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.21007604562738,1.02334630350195,32.3269961977186,35.6120156529716,36
+"278",38,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",8.06500844951415,1.02334630350195,74.7376425855513,82.9909391700736,83
+"279",38,"GJ","2013","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.08749207858048,1.02334630350195,32.3269961977186,35.4865698034255,35
+"280",38,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",8.86334891212505,1.02334630350195,74.7376425855513,83.8079179314225,84
+"281",38,"GJ","2014","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.86486058301648,1.02334630350195,32.3269961977186,36.2820869888989,36
+"282",43,"AP & TG","2007","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",15.641595373891,1.02334630350195,12.4562737642586,28.463042571003,28
+"283",43,"AP & TG","2008","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",18.1275084495142,1.02334630350195,12.4562737642586,31.0069925277691,31
+"284",43,"AP & TG","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",16.6547581326574,1.02334630350195,12.4562737642586,29.4998589350324,29
+"285",43,"AP & TG","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",11.0864292881284,1.02334630350195,12.4562737642586,23.8015301953005,24
+"286",43,"AP & TG","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",7.0305898817068,1.02334630350195,12.4562737642586,19.6510019311414,20
+"287",49,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.99691856780735,1.02334630350195,89.6851711026616,91.7287103374217,92
+"288",49,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.212286121673,1.02334630350195,89.6851711026616,91.9491059275643,92
+"289",49,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.76502693282636,1.02334630350195,89.6851711026616,91.4914048899508,91
+"290",49,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.65462610899873,1.02334630350195,89.6851711026616,91.3784266149833,91
+"291",49,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.65706590621039,1.02334630350195,89.6851711026616,91.3809233724411,91
+"292",54,"OD","2009","Semi/Peri-Urban","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",8.76794201520913,1.02334630350195,64.0608365019011,73.0334775524848,73
+"293",60,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.73909890806279,1.02334630350195,68.9885931558935,71.7916398983858,72
+"294",60,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.46765014136687,1.02334630350195,68.9885931558935,71.5138538063974,72
+"295",60,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.08709296090475,1.02334630350195,68.9885931558935,71.1244120225003,71
+"296",60,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.14190309057229,1.02334630350195,68.9885931558935,71.1805017660901,71
+"297",65,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.91273642390563,1.02334630350195,68.9885931558935,74.0160238153767,74
+"298",65,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",5.40803231939164,1.02334630350195,68.9885931558935,74.522883039162,75
+"299",65,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",5.63030125767768,1.02334630350195,68.9885931558935,74.7503411355404,75
+"300",65,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",5.2891135322219,1.02334630350195,68.9885931558935,74.4011879378949,74
+"301",65,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.16932338890514,1.02334630350195,68.9885931558935,73.2552548340338,73
+"302",72,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.23075095057034,1.02334630350195,64.0608365019011,65.3203209376988,65
+"303",72,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.47310678073511,1.02334630350195,64.0608365019011,65.5683348806301,66
+"304",72,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.43746039290241,1.02334630350195,64.0608365019011,65.5318562814083,66
+"305",72,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.45524397972117,1.02334630350195,64.0608365019011,65.5500550492422,66
+"306",72,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.56602503168568,1.02334630350195,64.0608365019011,65.6634224292682,66
+"307",77,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.36557351077313,1.02334630350195,64.0608365019011,65.458291106311,65
+"308",77,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.60674112801014,1.02334630350195,64.0608365019011,65.7050890959349,66
+"309",77,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",1.75483206590621,1.02334630350195,64.0608365019011,65.8566374098129,66
+"310",77,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.23764258555133,1.02334630350195,64.0608365019011,66.3507197703836,66
+"311",77,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.48930608365019,1.02334630350195,64.0608365019011,66.6082586808895,67
+"312",92,"AP & TG","2007","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",12.3905787917195,1.02334630350195,14.2357414448669,26.9155944496226,27
+"313",92,"AP & TG","2008","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",13.4617342627799,1.02334630350195,14.2357414448669,28.0117574414082,28
+"314",92,"AP & TG","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",14.5591254752852,1.02334630350195,14.2357414448669,29.134768682221,29
+"315",92,"AP & TG","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",12.0223912125053,1.02334630350195,14.2357414448669,26.5388110514385,27
+"316",103,"OD","2009","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.62062561611041,1.02334630350195,99.6501901140685,102.331997651178,102
+"317",103,"OD","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.52765455569638,1.02334630350195,99.6501901140685,102.23685606017,102
+"318",103,"OD","2011","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",2.86583755809041,1.02334630350195,99.6501901140685,102.582934385577,103
+"319",103,"OD","2012","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.27290170398535,1.02334630350195,99.6501901140685,102.999501974567,103
+"320",103,"OD","2013","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",3.39895789325447,1.02334630350195,99.6501901140685,103.128501109889,103
+"321",107,"AP & TG","2010","Rural","rural","Nurses","Community Health Centre (CHC)","Nurse_CHC",4.05148922686945,1.02334630350195,14.2357414448669,18.3818179688617,18
+"322",7,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.03737325728771,1.02334630350195,5.5361216730038,7.62106006470289,8
+"323",7,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.50971166032953,1.02334630350195,5.5361216730038,7.08107951995581,7
+"324",7,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.31155735107731,1.02334630350195,5.5361216730038,6.87829904005957,7
+"325",7,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.68035487959442,1.02334630350195,5.5361216730038,7.25570662760821,7
+"326",7,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.43566223067174,1.02334630350195,5.5361216730038,7.00530130983908,7
+"327",9,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",7.82309885931559,1.02334630350195,7.38149556400507,15.387234863616,15
+"328",9,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",7.26800802703845,1.02334630350195,7.38149556400507,14.8191847122973,15
+"329",9,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",6.5572982678496,1.02334630350195,7.38149556400507,14.0918825073687,14
+"330",9,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",7.33197084917617,1.02334630350195,7.38149556400507,14.8846408298935,15
+"331",9,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",7.87411280101394,1.02334630350195,7.38149556400507,15.43943979228,15
+"332",12,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.57089010350655,1.02334630350195,6.45880861850444,9.0897195026376,9
+"333",12,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.20113408322772,1.02334630350195,6.45880861850444,9.73467734958961,10
+"334",12,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.63862484157161,1.02334630350195,6.45880861850444,10.1823818999571,10
+"335",12,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.35753987114491,1.02334630350195,6.45880861850444,9.89473463450098,10
+"336",12,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.04713772708069,1.02334630350195,6.45880861850444,8.55373944427184,9
+"337",14,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",6.32642585551331,1.02334630350195,7.38149556400507,13.8556200776237,14
+"338",14,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",8.92597169412759,1.02334630350195,7.38149556400507,16.5158557023535,17
+"339",14,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",9.09726446979299,1.02334630350195,7.38149556400507,16.6911475311473,17
+"340",14,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",8.89715885086608,1.02334630350195,7.38149556400507,16.4863701857085,16
+"341",22,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.0681770173215,1.02334630350195,7.38149556400507,10.5213031731707,11
+"342",22,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.55750950570342,1.02334630350195,7.38149556400507,11.0220597663397,11
+"343",22,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.32393324883819,1.02334630350195,7.38149556400507,10.7830303672908,11
+"344",24,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.06242078580482,1.02334630350195,6.45880861850444,7.54603300242143,8
+"345",24,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.11107810519645,1.02334630350195,6.45880861850444,7.59582629035917,8
+"346",24,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.27520991761724,1.02334630350195,6.45880861850444,7.76378997388706,8
+"347",24,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.4536200887199,1.02334630350195,6.45880861850444,7.94636536299211,8
+"348",24,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.25705006337136,1.02334630350195,6.45880861850444,7.7452061541724,8
+"349",27,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.71272708069286,1.02334630350195,7.38149556400507,10.1575547944417,10
+"350",27,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.69207858048162,1.02334630350195,7.38149556400507,11.1597705315796,11
+"351",27,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.5287072243346,1.02334630350195,7.38149556400507,9.96923875466655,10
+"352",27,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.65952682720744,1.02334630350195,7.38149556400507,11.126458815194,11
+"353",27,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.62363751584284,1.02334630350195,7.38149556400507,10.0663853175719,10
+"354",29,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.893303760033798,1.02334630350195,7.38149556400507,8.29565466474005,8
+"355",29,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.877967891846219,1.02334630350195,7.38149556400507,8.27996076071929,8
+"356",29,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.965367553865653,1.02334630350195,7.38149556400507,8.3694008817742,8
+"357",29,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.07215885086608,1.02334630350195,7.38149556400507,8.47868536080576,8
+"358",39,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.59861903253063,1.02334630350195,6.45880861850444,7.07140319265057,7
+"359",39,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.59163234051542,1.02334630350195,6.45880861850444,7.0642533872031,7
+"360",39,"GJ","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.832382762991128,1.02334630350195,18.3384030418251,19.1902188654308,19
+"361",39,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.517560466835657,1.02334630350195,6.45880861850444,6.98845220907945,7
+"362",39,"GJ","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.805053865652725,1.02334630350195,18.3384030418251,19.1622519393608,19
+"363",39,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.535489279678919,1.02334630350195,6.45880861850444,7.00679959342878,7
+"364",39,"GJ","2012","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.73950411913815,1.02334630350195,18.3384030418251,19.0951718485696,19
+"365",39,"GJ","2013","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.45445183776933,1.02334630350195,18.3384030418251,19.8268109536279,20
+"366",39,"GJ","2014","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.38664448669202,1.02334630350195,18.3384030418251,19.7574205515527,20
+"367",41,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.42384875369666,1.02334630350195,7.38149556400507,8.8385859228464,9
+"368",41,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.49947190536544,1.02334630350195,7.38149556400507,8.91597459556581,9
+"369",41,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.53263624841572,1.02334630350195,7.38149556400507,8.94991320343438,9
+"370",41,"GJ","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.767215885086607,1.02334630350195,24.4512040557668,25.2363315957581,25
+"371",41,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.53728348119983,1.02334630350195,7.38149556400507,8.95466893192552,9
+"372",41,"GJ","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.523447401774398,1.02334630350195,24.4512040557668,24.9868720194503,25
+"373",41,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.52577101816646,1.02334630350195,7.38149556400507,8.94288769543611,9
+"374",41,"GJ","2012","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.62130333755809,1.02334630350195,24.4512040557668,25.0870125296103,25
+"375",41,"GJ","2013","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.425433037600338,1.02334630350195,24.4512040557668,24.8865693821827,25
+"376",41,"GJ","2014","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.895014786649768,1.02334630350195,24.4512040557668,25.3671141292644,25
+"377",55,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.595763360794254,1.02334630350195,6.45880861850444,7.06848085153513,7
+"378",55,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.506257921419518,1.02334630350195,6.45880861850444,6.97688579100768,7
+"379",55,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.548353664976764,1.02334630350195,6.45880861850444,7.01996431457015,7
+"380",55,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.455151563160118,1.02334630350195,6.45880861850444,6.92458628819748,7
+"381",55,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.414257234896493,1.02334630350195,6.45880861850444,6.8827372285347,7
+"382",57,"AP & TG","2007","Semi/Peri-Urban","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.892483606105692,1.02334630350195,6.73962638452637,7.65294618377072,8
+"383",57,"AP & TG","2008","Semi/Peri-Urban","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.02830219871053,1.02334630350195,6.73962638452637,7.79193563845971,8
+"384",57,"AP & TG","2009","Semi/Peri-Urban","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.166116989034,1.02334630350195,6.73962638452637,7.93296789470513,8
+"385",57,"AP & TG","2010","Semi/Peri-Urban","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.15739929464925,1.02334630350195,6.73962638452637,7.92404667438144,8
+"386",57,"AP & TG","2011","Semi/Peri-Urban","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.21242491871935,1.02334630350195,6.73962638452637,7.98035694337146,8
+"387",60,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.21406316011829,1.02334630350195,8.61174482467258,11.9008444788014,12
+"388",78,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.342957858048162,1.02334630350195,6.45880861850444,6.80977327479497,7
+"389",78,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.379055766793409,1.02334630350195,6.45880861850444,6.84671393627357,7
+"390",78,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.418388255175327,1.02334630350195,6.45880861850444,6.88696469286674,7
+"391",78,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.367725496408956,1.02334630350195,6.45880861850444,6.83511914595796,7
+"392",78,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.419118346007605,1.02334630350195,6.45880861850444,6.88771182862117,7
+"393",83,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.379700042247571,1.02334630350195,7.38149556400507,7.77006019867865,8
+"394",83,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.458438952260245,1.02334630350195,7.38149556400507,7.8506373711819,8
+"395",93,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.7543963878327,1.02334630350195,6.45880861850444,7.23081737336825,7
+"396",98,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.127396229404309,1.02334630350195,6.45880861850444,6.58917907894542,7
+"397",98,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.135159220532319,1.02334630350195,6.45880861850444,6.59712330722039,7
+"398",98,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.131277724968314,1.02334630350195,6.45880861850444,6.59315119308291,7
+"399",98,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.165961660329531,1.02334630350195,6.45880861850444,6.62864487012571,7
+"400",98,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.174195975918885,1.02334630350195,6.45880861850444,6.63707142654594,7
+"401",100,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.333503643852978,1.02334630350195,6.45880861850444,6.80009833964581,7
+"402",100,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.314715356991973,1.02334630350195,6.45880861850444,6.78087141573747,7
+"403",100,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",0.266621778622729,1.02334630350195,6.45880861850444,6.73165503009112,7
+"404",108,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.4534748626954,1.02334630350195,7.38149556400507,10.9155962989813,11
+"405",108,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.40673848753697,1.02334630350195,7.38149556400507,10.8677688022238,11
+"406",108,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.63656527249683,1.02334630350195,7.38149556400507,10.0796148895563,10
+"407",108,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",2.68514997887621,1.02334630350195,7.38149556400507,10.1293338692364,10
+"408",108,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",3.30412970004225,1.02334630350195,7.38149556400507,10.7627644788343,11
+"409",113,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.93566186223362,1.02334630350195,7.20983287647007,9.19068528801654,9
+"410",115,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.43967046894804,1.02334630350195,7.38149556400507,8.85477701666395,9
+"411",115,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.38031263202366,1.02334630350195,7.38149556400507,8.79403339366352,9
+"412",115,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.26347697507393,1.02334630350195,7.38149556400507,8.6744700560068,9
+"413",115,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.21555766793409,1.02334630350195,7.38149556400507,8.62543201017887,9
+"414",115,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.29915504858471,1.02334630350195,7.38149556400507,8.71098108065012,9
+"415",127,"AP & TG","2007","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.57764047317279,1.02334630350195,7.38149556400507,8.99596811048151,9
+"416",127,"AP & TG","2008","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.5433037600338,1.02334630350195,7.38149556400507,8.96082976201631,9
+"417",127,"AP & TG","2009","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.26647655259823,1.02334630350195,7.38149556400507,8.67753966257835,9
+"418",127,"AP & TG","2010","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.28544571187157,1.02334630350195,7.38149556400507,8.69695168160126,9
+"419",127,"AP & TG","2011","Rural","rural","Nurses","Primary Health Centre (PHC)","Nurse_PHC",1.51059357836924,1.02334630350195,7.38149556400507,8.92735591852301,9
+"420",3,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.81606463878327,1.03137254901961,1.35361216730038,4.25802393200626,4
+"421",3,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.10329531051964,1.03137254901961,1.35361216730038,4.55426576207162,5
+"422",3,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.21599070553443,1.03137254901961,1.35361216730038,4.67049669889079,5
+"423",3,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.81014997887621,1.03137254901961,1.35361216730038,4.25192371414134,4
+"424",3,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.0017955217575,1.03137254901961,1.35361216730038,4.44958166621106,5
+"425",8,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.14226869455006,1.03299293008641,1.4212927756654,2.60124826139465,3
+"426",8,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.947306717363752,1.03299293008641,1.4212927756654,2.39985391732552,3
+"427",8,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.832192648922687,1.03299293008641,1.4212927756654,2.28094189847242,3
+"428",8,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.816666666666667,1.03299293008641,1.4212927756654,2.2649036685693,3
+"429",8,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.51223067173638,1.03299293008641,1.4212927756654,2.9834163682289,3
+"430",11,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.17379242360231,1.02921993216801,0.0283903675538657,0.20726099398515,1
+"431",11,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.215934375440079,1.02921993216801,0.0283903675538657,0.250634330797046,1
+"432",11,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.204597943951556,1.02921993216801,0.0283903675538657,0.238966649549401,1
+"433",11,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.229883115054218,1.02921993216801,0.0283903675538657,0.26499065163654,1
+"434",11,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.392388396000563,1.02921993216801,0.0283903675538657,0.432244325869081,1
+"435",15,"GJ","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.909194127587664,1.01806451612903,0.0532319391634981,0.978850218733391,1
+"436",15,"GJ","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.907469018448106,1.01806451612903,0.0532319391634981,0.977093946331957,1
+"437",15,"GJ","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.910025876637093,1.01806451612903,0.0532319391634981,0.979696992926939,1
+"438",15,"GJ","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.16614297282073,1.01806451612903,0.0532319391634981,1.24044072052551,2
+"439",15,"GJ","2014","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.28566839177581,1.01806451612903,0.0532319391634981,1.36212530833913,2
+"440",17,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.988506020278834,1.03299293008641,1.4212927756654,2.44241250596129,3
+"441",17,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.961391001267427,1.03299293008641,1.4212927756654,2.41440288302335,3
+"442",17,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.609782953105197,1.03299293008641,1.4212927756654,2.05119425511028,2
+"443",17,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.548288973384031,1.03299293008641,1.4212927756654,1.98767140881544,2
+"444",17,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.661406844106464,1.03299293008641,1.4212927756654,2.10452136953814,2
+"445",21,"AP & TG","2007","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0535487959442332,1.03137254901961,0.0304182509505703,0.085647009120505,1
+"446",21,"AP & TG","2008","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0573510773130545,1.03137254901961,0.0304182509505703,0.089568577747956,1
+"447",21,"AP & TG","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0510139416983523,1.03137254901961,0.0304182509505703,0.0830326300355377,1
+"448",21,"AP & TG","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0590409801436417,1.03137254901961,0.0304182509505703,0.0913114971379342,1
+"449",21,"AP & TG","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0691803971271652,1.03137254901961,0.0304182509505703,0.101769013477803,1
+"450",22,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.890692332065906,1.03299293008641,1.4212927756654,2.34137165757166,3
+"451",22,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.912872306717364,1.03299293008641,1.4212927756654,2.36428341457611,3
+"452",22,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.928675538656528,1.03299293008641,1.4212927756654,2.38060804144178,3
+"453",22,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.954016159695818,1.03299293008641,1.4212927756654,2.40678472381937,3
+"454",22,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.03147972116603,1.03299293008641,1.4212927756654,2.48680403515741,3
+"455",23,"MP","2008","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.297088438248134,1.03679369250986,0.0709759188846641,0.378995337777933,1
+"456",23,"MP","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.349088156597662,1.03679369250986,0.0709759188846641,0.432908317775013,1
+"457",23,"MP","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.318159414167019,1.03679369250986,0.0709759188846641,0.40084159270566,1
+"458",23,"MP","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.298567103224898,1.03679369250986,0.0709759188846641,0.380528408299177,1
+"459",23,"MP","2012","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.342680608365019,1.03679369250986,0.0709759188846641,0.426265012182956,1
+"460",26,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.587663709336713,1.03137254901961,0.0304182509505703,0.636518468815494,1
+"461",26,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.553654414871145,1.03137254901961,0.0304182509505703,0.601442216092183,1
+"462",26,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.543092522179975,1.03137254901961,0.0304182509505703,0.590548969904819,1
+"463",26,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.513202365863963,1.03137254901961,0.0304182509505703,0.559721083194579,1
+"464",26,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.491233629066329,1.03137254901961,0.0304182509505703,0.537063131124862,1
+"465",29,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.733218777420298,1.02518740629685,1.09330213512723,1.84498879179889,2
+"466",29,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.76132762991128,1.02518740629685,1.09330213512723,1.87380563337811,2
+"467",29,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.763630934971239,1.02518740629685,1.09330213512723,1.87616695271843,2
+"468",29,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.682290143316759,1.02518740629685,1.09330213512723,1.79277739749605,2
+"469",29,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.594252705469436,1.02518740629685,1.09330213512723,1.70252252493233,2
+"470",32,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.459513624841572,1.03299293008641,1.4212927756654,1.89596710140512,2
+"471",32,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.496831432192649,1.03299293008641,1.4212927756654,1.93451613256511,2
+"472",32,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.510804816223067,1.03299293008641,1.4212927756654,1.94895053947792,2
+"473",32,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.541801330798479,1.03299293008641,1.4212927756654,1.98096971989164,2
+"474",32,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.609450253485425,1.03299293008641,1.4212927756654,2.05085057875521,2
+"475",38,"AP & TG","2007","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.914970162653148,1.02734375,0.0266159695817491,0.966604847619944,1
+"476",38,"AP & TG","2008","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.04878934305027,1.02734375,0.0266159695817491,1.10408314623105,2
+"477",38,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.98459283903676,1.02734375,1.18441064638783,4.250613445867,4
+"478",38,"AP & TG","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.21389152936206,1.02734375,0.0266159695817491,1.2736998454498,2
+"479",38,"GJ","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.82731305449937,1.02334630350195,0.0684410646387833,1.93841512430156,2
+"480",38,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.40056638149556,1.02734375,1.18441064638783,3.65061751487742,4
+"481",38,"AP & TG","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.53125,1.02734375,0.0266159695817491,1.59973608676925,2
+"482",38,"GJ","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.63307984790875,1.02334630350195,0.0684410646387833,1.73964729031972,2
+"483",38,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.58267321504014,1.02734375,1.18441064638783,3.83770383215172,4
+"484",38,"AP & TG","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.39036095268272,1.02734375,0.0266159695817491,1.45499460456439,2
+"485",38,"GJ","2012","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.36307826362484,1.02334630350195,0.0684410646387833,1.46334216710312,2
+"486",38,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.98653358681876,1.02734375,1.18441064638783,4.25260726097117,4
+"487",38,"GJ","2013","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.3925855513308,1.02334630350195,0.0684410646387833,1.49353834090337,2
+"488",38,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.28577841149134,1.02734375,1.18441064638783,4.56003456131839,5
+"489",38,"GJ","2014","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.71201679340938,1.02334630350195,0.0684410646387833,1.82042712170752,2
+"490",43,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.04859130756232,1.02734375,0.0266159695817491,3.15856719571022,3
+"491",43,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.58466017110266,1.02734375,0.0266159695817491,2.681950442238,3
+"492",43,"OD","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.817670926630052,1.01806451612903,0.789607097591889,1.62204885386429,2
+"493",43,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.82512806294888,1.02734375,0.0266159695817491,2.92899362800189,3
+"494",43,"GJ","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.306407108153781,1.02734375,0.0798479087452472,0.394633336262608,1
+"495",43,"OD","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.78301471623715,1.01806451612903,0.789607097591889,1.58676659579977,2
+"496",43,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.51904441275877,1.02734375,0.0266159695817491,2.61454050300189,3
+"497",43,"GJ","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.346654520490072,1.02734375,0.0798479087452472,0.435981263779969,1
+"498",43,"OD","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.728889416983523,1.01806451612903,0.789607097591889,1.53166354920479,2
+"499",43,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.26092495775243,1.02734375,0.0266159695817491,2.34936309414772,3
+"500",43,"GJ","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.426410012674271,1.02734375,0.0798479087452472,0.517917570203581,1
+"501",43,"OD","2012","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.745770842134911,1.01806451612903,0.789607097591889,1.54884992913311,2
+"502",43,"GJ","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.449606569497254,1.02734375,0.0798479087452472,0.541748407877192,1
+"503",43,"OD","2013","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.634008414307844,1.01806451612903,0.789607097591889,1.43506856712594,2
+"504",43,"GJ","2014","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.415504858470638,1.02734375,0.0798479087452472,0.506714228189692,1
+"505",49,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.604459759188847,1.03299293008641,1.4212927756654,2.04569543342921,2
+"506",49,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.632184727503169,1.03299293008641,1.4212927756654,2.07433512968478,2
+"507",49,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.530711343472751,1.03299293008641,1.4212927756654,1.96951384138941,2
+"508",49,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.536977186311787,1.03299293008641,1.4212927756654,1.97598641274317,2
+"509",49,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.507145120405577,1.03299293008641,1.4212927756654,1.94517009957218,2
+"510",54,"OD","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.77301172370089,1.02334630350195,1.01520912547529,3.85296042249215,4
+"511",54,"OD","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.55596482889734,1.02334630350195,1.01520912547529,4.6541925885103,5
+"512",54,"OD","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.07473859315589,1.02334630350195,1.01520912547529,4.16173149901614,4
+"513",54,"OD","2012","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.80584600760456,1.02334630350195,1.01520912547529,3.88656126555311,4
+"514",54,"OD","2013","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.29820183776933,1.02334630350195,1.01520912547529,4.39041178435985,4
+"515",60,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.765042775665399,1.03299293008641,1.4212927756654,2.21157655414144,3
+"516",60,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.822710709759189,1.03299293008641,1.4212927756654,2.27114712235301,3
+"517",60,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.773692965779468,1.03299293008641,1.4212927756654,2.22051213937318,3
+"518",60,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.695564005069709,1.03299293008641,1.4212927756654,2.139805475325,2
+"519",60,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.717688529784538,1.03299293008641,1.4212927756654,2.16265995293694,2
+"520",63,"GJ","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.103275506970849,1.02734375,0.0798479087452472,0.185947355359831,1
+"521",63,"GJ","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.345453105196451,1.02734375,0.0798479087452472,0.434746997286914,1
+"522",63,"GJ","2014","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.519473489649345,1.02734375,0.0798479087452472,0.613525751627192,1
+"523",65,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.86001267427123,1.03299293008641,1.4212927756654,3.3426727180587,4
+"524",65,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.15805608365019,1.03299293008641,1.4212927756654,3.65054945280601,4
+"525",65,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.1406448035488,1.03299293008641,1.4212927756654,3.63256372355752,4
+"526",65,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.12107097591889,1.03299293008641,1.4212927756654,3.61234409800109,4
+"527",65,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.74517585551331,1.03299293008641,1.4212927756654,3.22404709616815,3
+"528",72,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.389615019011407,1.02334630350195,1.01520912547529,1.41392021496945,2
+"529",72,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.332461977186312,1.02334630350195,1.01520912547529,1.35543286088385,2
+"530",72,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.394130228136882,1.02334630350195,1.01520912547529,1.41854083753754,2
+"531",72,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.443837135614702,1.02334630350195,1.01520912547529,1.46940821756348,2
+"532",72,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.482533269961977,1.02334630350195,1.01520912547529,1.50900776360758,2
+"533",77,"AP & TG","2007","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0869243768483312,1.03137254901961,0.0304182509505703,0.120069667072575,1
+"534",77,"AP & TG","2008","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0904626108998733,1.03137254901961,0.0304182509505703,0.123718904545342,1
+"535",77,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.340308583298127,1.01806451612903,0.789607097591889,1.13606319078185,2
+"536",77,"AP & TG","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0883502323616392,1.03137254901961,0.0304182509505703,0.121540255307869,1
+"537",77,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.337874947190537,1.01806451612903,0.789607097591889,1.13358559221554,2
+"538",77,"AP & TG","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.13276299112801,1.03137254901961,0.0304182509505703,0.167346355525734,1
+"539",77,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.460912195465427,1.01806451612903,0.789607097591889,1.25884544884637,2
+"540",77,"AP & TG","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0891951837769328,1.03137254901961,0.0304182509505703,0.122411715002858,1
+"541",77,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.536385720321082,1.01806451612903,0.789607097591889,1.33568236640909,2
+"542",77,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.528961589916913,1.01806451612903,0.789607097591889,1.32812412268149,2
+"543",82,"AP & TG","2007","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0292036332910858,1.02734375,0.0266159695817491,0.0566181397206379,1
+"544",82,"AP & TG","2008","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.031236797634136,1.02734375,0.0266159695817491,0.0587068984011935,1
+"545",82,"AP & TG","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0364583333333333,1.02734375,0.0266159695817491,0.0640712104671657,1
+"546",82,"AP & TG","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0569286016054077,1.02734375,0.0266159695817491,0.0851012126373046,1
+"547",82,"AP & TG","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.0639984685255598,1.02734375,0.0266159695817491,0.0923643962310546,1
+"548",86,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.69223700887199,1.03299293008641,1.4212927756654,2.13636871177433,2
+"549",86,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.578509188846641,1.03299293008641,1.4212927756654,2.018888677734,2
+"550",86,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.934331432192649,1.03299293008641,1.4212927756654,2.38645053947792,3
+"551",86,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.702661596958175,1.03299293008641,1.4212927756654,2.14713723756642,2
+"552",86,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.774801964512041,1.03299293008641,1.4212927756654,2.2216577272234,3
+"553",91,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.07057192648923,1.03299293008641,1.4212927756654,2.52718600687776,3
+"554",91,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.10971958174905,1.03299293008641,1.4212927756654,2.56762525799062,3
+"555",91,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.13833174904943,1.03299293008641,1.4212927756654,2.59718142452636,3
+"556",91,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.19533428390368,1.03299293008641,1.4212927756654,2.6560646400278,3
+"557",91,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.22627534854246,1.03299293008641,1.4212927756654,2.68802654104901,3
+"558",92,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.58343895226025,1.03137254901961,0.0304182509505703,1.66353371936016,2
+"559",92,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.95136248415716,1.03137254901961,0.0304182509505703,2.04299995029698,2
+"560",92,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.97507393324884,1.03137254901961,0.0304182509505703,2.06745528798761,2
+"561",92,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.54140261934939,1.03137254901961,0.0304182509505703,1.62017859953445,2
+"562",92,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.624207858048162,1.03137254901961,0.0304182509505703,0.674209100623773,1
+"563",97,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"564",97,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"565",97,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"566",97,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"567",97,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"568",98,"OD","2009","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.11183284044501,1.03679369250986,1.57921419518378,2.73195547128248,3
+"569",98,"OD","2010","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.41200183072807,1.03679369250986,1.57921419518378,3.04316878709501,3
+"570",98,"OD","2011","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.15785628784678,1.03679369250986,1.57921419518378,2.7796722912562,3
+"571",98,"OD","2012","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.24941029432474,1.03679369250986,1.57921419518378,2.87459490769655,3
+"572",98,"OD","2013","Semi/Peri-Urban","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.58574496549782,1.03679369250986,1.57921419518378,3.22330457334117,3
+"573",103,"OD","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.804516969440924,1.03679369250986,1.57921419518378,2.41333231461727,3
+"574",103,"OD","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.934146599070554,1.03679369250986,1.57921419518378,2.54773149697966,3
+"575",103,"OD","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.832241937755246,1.03679369250986,1.57921419518378,2.4420773868906,3
+"576",103,"OD","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.617342627798902,1.03679369250986,1.57921419518378,2.21927113780314,3
+"577",103,"OD","2013","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.73680643571328,1.03679369250986,1.57921419518378,2.34313046033197,3
+"578",107,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.0911491339248,1.03137254901961,0.0304182509505703,1.15579951456713,2
+"579",107,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.907425010561893,1.03137254901961,0.0304182509505703,0.966311497137934,1
+"580",107,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.31020278833967,1.03137254901961,0.0304182509505703,1.38172544049305,2
+"581",107,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.26431136459654,1.03137254901961,0.0304182509505703,1.33439428580896,2
+"582",107,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.39612378538234,1.03137254901961,0.0304182509505703,1.47034199822726,2
+"583",121,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.89110688635403,1.03137254901961,0.0304182509505703,1.98085398079806,2
+"584",121,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.51473384030418,1.03137254901961,0.0304182509505703,2.62404570193096,3
+"585",121,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.8722539079003,1.03137254901961,0.0304182509505703,2.99278208537323,3
+"586",121,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.53818124207858,1.03137254901961,0.0304182509505703,2.64822870846691,3
+"587",121,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",3.06131178707224,1.03137254901961,0.0304182509505703,3.18777119212704,3
+"588",126,"AP & TG","2007","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",1.28480143641741,1.03137254901961,0.0304182509505703,1.35552718341244,2
+"589",126,"AP & TG","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.608470637938319,1.03137254901961,0.0304182509505703,0.657978163804601,1
+"590",126,"AP & TG","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.83871989860583,1.03137254901961,0.0304182509505703,0.895450930689133,1
+"591",126,"AP & TG","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.24292353189692,1.03137254901961,0.0304182509505703,2.34370801129915,3
+"592",126,"AP & TG","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",2.86633924799324,1.03137254901961,0.0304182509505703,2.9866818675083,3
+"593",137,"MP","2008","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.10794254330376,1.03679369250986,0.0709759188846641,0.182890066935474,1
+"594",137,"MP","2009","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.115582312350373,1.03679369250986,0.0709759188846641,0.190810931295235,1
+"595",137,"MP","2010","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.121127306013238,1.03679369250986,0.0709759188846641,0.1965599457499,1
+"596",137,"MP","2011","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.113980425292212,1.03679369250986,0.0709759188846641,0.189150104897221,1
+"597",137,"MP","2012","Rural","rural","Medical specialist","Community Health Centre (CHC)","Phys_CHC",0.101781439233911,1.03679369250986,0.0709759188846641,0.176502273096958,1
+"598",3,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.374947190536544,1.03137254901961,1.35361216730038,1.7403224069518,2
+"599",3,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.565114068441065,1.03137254901961,1.35361216730038,1.93645530455528,2
+"600",3,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.442120828052387,1.03137254901961,1.35361216730038,1.80960345270343,2
+"601",3,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.525929446556823,1.03137254901961,1.35361216730038,1.89604136120016,2
+"602",3,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.546630756231517,1.03137254901961,1.35361216730038,1.9173921237274,2
+"603",11,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02921993216801,0.0283903675538657,0.0283903675538657,1
+"604",11,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02921993216801,0.0283903675538657,0.0283903675538657,1
+"605",11,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02921993216801,0.0283903675538657,0.0283903675538657,1
+"606",11,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02921993216801,0.0283903675538657,0.0283903675538657,1
+"607",11,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02921993216801,0.0283903675538657,0.0283903675538657,1
+"608",15,"GJ","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0613029854950007,1.01806451612903,0.0532319391634981,0.115642333428731,1
+"609",15,"GJ","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0768597732713702,1.01806451612903,0.0532319391634981,0.131480147048803,1
+"610",15,"GJ","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0528314673989579,1.01806451612903,0.0532319391634981,0.107017781457405,1
+"611",15,"GJ","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.355372482748909,1.01806451612903,0.0532319391634981,0.415024053858839,1
+"612",15,"GJ","2014","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.103814603576961,1.01806451612903,0.0532319391634981,0.158921903321204,1
+"613",21,"AP & TG","2007","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.92347908745247,1.03137254901961,0.0304182509505703,3.04561432938194,3
+"614",21,"AP & TG","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.93916349809886,1.03137254901961,0.0304182509505703,3.06179079997018,3
+"615",21,"AP & TG","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",3.31416349809886,1.03137254901961,0.0304182509505703,3.44855550585253,4
+"616",21,"AP & TG","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",3.42442965779468,1.03137254901961,0.0304182509505703,3.56228099604861,4
+"617",21,"AP & TG","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",3.54404309252218,1.03137254901961,0.0304182509505703,3.68564700912051,4
+"618",23,"MP","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"619",23,"MP","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"620",23,"MP","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"621",23,"MP","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"622",23,"MP","2012","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"623",26,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.7215356991973,1.03137254901961,0.0304182509505703,2.83733546227955,3
+"624",26,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.28818124207858,1.03137254901961,0.0304182509505703,1.3590130221924,2
+"625",26,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.13286861005492,1.03137254901961,0.0304182509505703,2.23020038602682,3
+"626",26,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.99873257287706,1.03137254901961,0.0304182509505703,2.0918561594473,2
+"627",26,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.47285593578369,1.03137254901961,0.0304182509505703,1.54948143177846,2
+"628",29,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02518740629685,1.09330213512723,1.09330213512723,1
+"629",29,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02518740629685,1.09330213512723,1.09330213512723,1
+"630",29,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02518740629685,1.09330213512723,1.09330213512723,1
+"631",29,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02518740629685,1.09330213512723,1.09330213512723,1
+"632",29,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02518740629685,1.09330213512723,1.09330213512723,1
+"633",32,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0112563371356147,1.03299293008641,1.4212927756654,1.43292049234516,2
+"634",32,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0217363751584284,1.03299293008641,1.4212927756654,1.44374629752976,2
+"635",32,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.419146070975919,1.03299293008641,1.4212927756654,1.85426770365702,2
+"636",32,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0262278200253485,1.03299293008641,1.4212927756654,1.44838592832316,2
+"637",38,"AP & TG","2007","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.942279256442755,1.02734375,0.0266159695817491,0.99466067444286,1
+"638",38,"AP & TG","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.874584125475285,1.02734375,0.0266159695817491,0.925114504737999,1
+"639",38,"AP & TG","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.46022787283481,1.02734375,0.0266159695817491,1.52677194831439,2
+"640",38,"GJ","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0438846641318124,1.02334630350195,0.0684410646387833,0.113350273458498,1
+"641",38,"AP & TG","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.47616972961555,1.02734375,0.0266159695817491,1.54314971524147,2
+"642",38,"GJ","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0259030418250951,1.02334630350195,0.0684410646387833,0.0949488467399506,1
+"643",38,"AP & TG","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.24286412125053,1.02734375,0.0266159695817491,1.30346465664772,2
+"644",38,"GJ","2012","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0356859949302915,1.02334630350195,0.0684410646387833,0.104960195637486,1
+"645",38,"GJ","2013","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0781051964512041,1.02334630350195,0.0684410646387833,0.148369728711416,1
+"646",38,"GJ","2014","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0828976552598226,1.02334630350195,0.0684410646387833,0.153274073717901,1
+"647",43,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.31577418673426,1.02734375,0.0266159695817491,2.40571210673453,3
+"648",43,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.78247782002535,1.02734375,0.0266159695817491,2.88517716749842,3
+"649",43,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.20187077524292,1.02734375,0.0266159695817491,2.28869414883522,3
+"650",43,"GJ","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00512911913814956,1.02734375,0.0798479087452472,0.0851172772348305,1
+"651",43,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.60943441064639,1.02734375,0.0266159695817491,1.68005835239425,2
+"652",43,"GJ","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00304974651457541,1.02734375,0.0798479087452472,0.0829810467660805,1
+"653",43,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.830778675538657,1.02734375,0.0266159695817491,0.880111249529666,1
+"654",43,"GJ","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00443599493029151,1.02734375,0.0798479087452472,0.0844052004119138,1
+"655",43,"GJ","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00734711660329531,1.02734375,0.0798479087452472,0.0873959230681638,1
+"656",43,"GJ","2014","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0110899873257288,1.02734375,0.0798479087452472,0.0912411379119138,1
+"657",49,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"658",49,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"659",49,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"660",49,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"661",49,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"662",57,"MP","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0409745847508505,1.03478981155519,0.0672403442065239,0.109640427039409,1
+"663",57,"MP","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0262657594556734,1.03478981155519,0.0672403442065239,0.0944198844840141,1
+"664",57,"MP","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.033620172103262,1.03478981155519,0.0672403442065239,0.102030155761711,1
+"665",57,"MP","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0297678607164299,1.03478981155519,0.0672403442065239,0.0980438231876794,1
+"666",57,"MP","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0290674404642786,1.03478981155519,0.0672403442065239,0.0973190354469464,1
+"667",65,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"668",65,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"669",65,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"670",65,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"671",65,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"672",77,"AP & TG","2007","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03137254901961,0.0304182509505703,0.0304182509505703,1
+"673",77,"AP & TG","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03137254901961,0.0304182509505703,0.0304182509505703,1
+"674",77,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.01806451612903,0.789607097591889,0.789607097591889,1
+"675",77,"AP & TG","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03137254901961,0.0304182509505703,0.0304182509505703,1
+"676",77,"OD","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.01806451612903,0.789607097591889,0.789607097591889,1
+"677",77,"AP & TG","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03137254901961,0.0304182509505703,0.0304182509505703,1
+"678",77,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0754119138149556,1.01806451612903,0.789607097591889,0.866381291140276,1
+"679",77,"AP & TG","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.000158428390367554,1.03137254901961,0.0304182509505703,0.0305816496433808,1
+"680",77,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0850232361639206,1.01806451612903,0.789607097591889,0.876166237376835,1
+"681",77,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.0946345585128855,1.01806451612903,0.789607097591889,0.885951183613394,1
+"682",82,"AP & TG","2007","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"683",82,"AP & TG","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"684",82,"AP & TG","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"685",82,"AP & TG","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"686",82,"AP & TG","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.02734375,0.0266159695817491,0.0266159695817491,1
+"687",86,"OD","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00249524714828897,1.03299293008641,1.4212927756654,1.4238703483284,2
+"688",86,"OD","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03299293008641,1.4212927756654,1.4212927756654,2
+"689",86,"OD","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00360424588086185,1.03299293008641,1.4212927756654,1.42501593617862,2
+"690",86,"OD","2013","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.00360424588086185,1.03299293008641,1.4212927756654,1.42501593617862,2
+"691",92,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",4.58940642163076,1.03137254901961,0.0304182509505703,4.76380605051484,5
+"692",92,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",4.36855724545839,1.03137254901961,0.0304182509505703,4.53602827273706,5
+"693",92,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",4.41434305027461,1.03137254901961,0.0304182509505703,4.58325049495929,5
+"694",92,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",4.06664554288128,1.03137254901961,0.0304182509505703,4.22464483047127,4
+"695",92,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",2.86929657794677,1.03137254901961,0.0304182509505703,2.98973197644077,3
+"696",97,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.643773764258555,1.02734375,0.0266159695817491,0.687992922706749,1
+"697",97,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.642526140684411,1.02734375,0.0266159695817491,0.686711184425499,1
+"698",97,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.581947084917617,1.02734375,0.0266159695817491,0.624475670102582,1
+"699",97,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.514852661596958,1.02734375,0.0266159695817491,0.555546633644249,1
+"700",97,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.22304737008872,1.02734375,0.0266159695817491,0.255762291196332,1
+"701",107,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.687103929024081,1.03137254901961,0.0304182509505703,0.739078381669525,1
+"702",107,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.634347275031686,1.03137254901961,0.0304182509505703,0.684666616963642,1
+"703",107,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.853348119983101,1.03137254901961,0.0304182509505703,0.910538076658632,1
+"704",107,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.930449936628644,1.03137254901961,0.0304182509505703,0.990058773826387,1
+"705",107,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.847591888466413,1.03137254901961,0.0304182509505703,0.904601257486518,1
+"706",121,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.535118293198141,1.03137254901961,0.0304182509505703,0.582324569033359,1
+"707",121,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.722961554710604,1.03137254901961,0.0304182509505703,0.776060952475625,1
+"708",121,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.892427122940431,1.03137254901961,0.0304182509505703,0.950843087551878,1
+"709",121,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.00829108576257,1.03137254901961,0.0304182509505703,1.07034199822726,1
+"710",121,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",1.21308618504436,1.03137254901961,0.0304182509505703,1.28156204180024,2
+"711",126,"AP & TG","2007","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.202577101816646,1.03137254901961,0.0304182509505703,0.239350712824209,1
+"712",126,"AP & TG","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.107414448669202,1.03137254901961,0.0304182509505703,0.141202564676061,1
+"713",126,"AP & TG","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.112589776087875,1.03137254901961,0.0304182509505703,0.146540255307869,1
+"714",126,"AP & TG","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.312896070975919,1.03137254901961,0.0304182509505703,0.353130669251224,1
+"715",126,"AP & TG","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.588455851288551,1.03137254901961,0.0304182509505703,0.637335462279547,1
+"716",129,"MP","2008","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.222107801718068,1.03679369250986,0.0709759188846641,0.301255886763187,1
+"717",129,"MP","2009","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.256301929305732,1.03679369250986,0.0709759188846641,0.336708142566954,1
+"718",129,"MP","2010","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.199311716659625,1.03679369250986,0.0709759188846641,0.277621049560675,1
+"719",129,"MP","2011","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.221183636107591,1.03679369250986,0.0709759188846641,0.300297717687409,1
+"720",129,"MP","2012","Semi/Peri-Urban","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.282486621602591,1.03679369250986,0.0709759188846641,0.363856266380649,1
+"721",137,"MP","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"722",137,"MP","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"723",137,"MP","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"724",137,"MP","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"725",137,"MP","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0,1.03679369250986,0.0709759188846641,0.0709759188846641,1
+"726",165,"MP","2008","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.121065694972539,1.03679369250986,0.0709759188846641,0.196496067811515,1
+"727",165,"MP","2009","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.137700675961132,1.03679369250986,0.0709759188846641,0.21374311117551,1
+"728",165,"MP","2010","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.13862484157161,1.03679369250986,0.0709759188846641,0.214701280251287,1
+"729",165,"MP","2011","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.305898817068019,1.03679369250986,0.0709759188846641,0.388129882967012,1
+"730",165,"MP","2012","Rural","rural","Surgery specialist","Community Health Centre (CHC)","Surg_CHC",0.155999155048585,1.03679369250986,0.0709759188846641,0.232714858875904,1
+"731",3,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0391846218842417,1.03137254901961,0.365019011406844,0.405432954761964,1
+"732",3,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0404520490071821,1.03137254901961,0.365019011406844,0.406740144304448,1
+"733",3,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.042247570764681,1.03137254901961,0.365019011406844,0.408591996156299,1
+"734",3,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0436206168145332,1.03137254901961,0.365019011406844,0.410008118160657,1
+"735",3,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.045099281791297,1.03137254901961,0.365019011406844,0.411533172626888,1
+"736",8,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00987008871989861,1.03299293008641,0.383269961977186,0.393465693844167,1
+"737",8,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0099809885931559,1.03299293008641,0.383269961977186,0.393580252629189,1
+"738",8,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0115335868187579,1.03299293008641,0.383269961977186,0.395184075619501,1
+"739",8,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0124207858048162,1.03299293008641,0.383269961977186,0.396100545899679,1
+"740",8,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.014638783269962,1.03299293008641,0.383269961977186,0.398391721600124,1
+"741",15,"GJ","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0464239191663146,1.01806451612903,0.0532319391634981,0.100494483966365,1
+"742",15,"GJ","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0301586044219124,1.01806451612903,0.0532319391634981,0.0839353441814192,1
+"743",15,"GJ","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0362889029714125,1.01806451612903,0.0532319391634981,0.0901763836079426,1
+"744",15,"GJ","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0459618363610759,1.01806451612903,0.0532319391634981,0.100024053858839,1
+"745",15,"GJ","2014","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0553575200675961,1.01806451612903,0.0532319391634981,0.109589466045219,1
+"746",23,"MP","2008","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.454196592029292,1.03679369250986,0.0709759188846641,0.541884080660106,1
+"747",23,"MP","2009","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.462329249401493,1.03679369250986,0.0709759188846641,0.550315968526948,1
+"748",23,"MP","2010","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.475883678355161,1.03679369250986,0.0709759188846641,0.564369114971684,1
+"749",23,"MP","2011","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.542670046472328,1.03679369250986,0.0709759188846641,0.633612800181204,1
+"750",23,"MP","2012","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.587276439938037,1.03679369250986,0.0709759188846641,0.679860427572064,1
+"751",29,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0541703227064444,1.02518740629685,0.294823047674759,0.350357780308442,1
+"752",29,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0667958467388125,1.02518740629685,0.294823047674759,0.363301308544324,1
+"753",29,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.076947450521595,1.02518740629685,0.294823047674759,0.373708604896148,1
+"754",29,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0750706834357024,1.02518740629685,0.294823047674759,0.371784566915139,1
+"755",29,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0495637125865263,1.02518740629685,0.294823047674759,0.345635141627782,1
+"756",38,"AP & TG","2007","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.126009980988593,1.02734375,0.0266159695817491,0.156071535987999,1
+"757",38,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.128551436417406,1.02734375,0.319391634980989,0.451458149737933,1
+"758",38,"AP & TG","2009","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.188437367976341,1.02734375,0.0266159695817491,0.220205921838694,1
+"759",38,"GJ","2010","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.154348859315589,1.02334630350195,0.0684410646387833,0.226393399269133,1
+"760",38,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0671868398817068,1.02734375,0.319391634980989,0.388415615015711,1
+"761",38,"AP & TG","2010","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.256548373468526,1.02734375,0.0266159695817491,0.290179337637305,1
+"762",38,"GJ","2011","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.165676489226869,1.02334630350195,0.0684410646387833,0.23798548746628,1
+"763",38,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.218287917194761,1.02734375,0.319391634980989,0.543648362411544,1
+"764",38,"AP & TG","2011","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.297073035487959,1.02734375,0.0266159695817491,0.331812095883832,1
+"765",38,"GJ","2012","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.13989226869455,1.02334630350195,0.0684410646387833,0.211599300695852,1
+"766",38,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.197309357836924,1.02734375,0.319391634980989,0.522096170571266,1
+"767",38,"GJ","2013","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.115890367553866,1.02334630350195,0.0684410646387833,0.187037043886513,1
+"768",38,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.199250105618927,1.02734375,0.319391634980989,0.524089985675433,1
+"769",38,"GJ","2014","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.136644486692015,1.02334630350195,0.0684410646387833,0.208275694988978,1
+"770",43,"AP & TG","2007","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",2.2356952365864,1.02734375,0.0266159695817491,2.32344349779355,3
+"771",43,"AP & TG","2008","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",3.52005439374736,1.02734375,0.0266159695817491,3.64292185065814,4
+"772",43,"AP & TG","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",2.63174640895649,1.02734375,0.0266159695817491,2.73032419440814,3
+"773",43,"GJ","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00314216307562315,1.02734375,0.0798479087452472,0.0830759903424694,1
+"774",43,"AP & TG","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.26009980988593,1.02734375,0.0266159695817491,1.32117163364425,2
+"775",43,"GJ","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00462082805238699,1.02734375,0.0798479087452472,0.0845950875646916,1
+"776",43,"AP & TG","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.395404256442755,1.02734375,0.0266159695817491,0.43283206116161,1
+"777",43,"GJ","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00665399239543726,1.02734375,0.0798479087452472,0.0866838462452472,1
+"778",43,"GJ","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00425116180819603,1.02734375,0.0798479087452472,0.084215313259136,1
+"779",43,"GJ","2014","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00295732995352767,1.02734375,0.0798479087452472,0.0828861031896916,1
+"780",49,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0338244613434728,1.03299293008641,0.383269961977186,0.418210391408975,1
+"781",49,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0676489226869455,1.03299293008641,0.383269961977186,0.453150820840763,1
+"782",49,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0585551330798479,1.03299293008641,0.383269961977186,0.443757000468938,1
+"783",49,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0450253485424588,1.03299293008641,0.383269961977186,0.429780828696223,1
+"784",49,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0416983523447402,1.03299293008641,0.383269961977186,0.426344065145555,1
+"785",54,"OD","2009","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.148685044359949,1.02334630350195,0.273764258555133,0.42592054908691,1
+"786",56,"GJ","2013","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.156646070975919,1.02334630350195,0.0684410646387833,0.228744242330093,1
+"787",56,"GJ","2014","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.145872940430925,1.02334630350195,0.0684410646387833,0.21771959900973,1
+"788",60,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0528992395437262,1.03299293008641,0.383269961977186,0.437914502432803,1
+"789",60,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0644328263624842,1.03299293008641,0.383269961977186,0.449828616075118,1
+"790",60,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0716413181242079,1.03299293008641,0.383269961977186,0.457274937101565,1
+"791",60,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0621039290240811,1.03299293008641,0.383269961977186,0.44742288158965,1
+"792",60,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0526774397972117,1.03299293008641,0.383269961977186,0.437685384862759,1
+"793",65,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0901615969581749,1.03299293008641,0.383269961977186,0.476406254200281,1
+"794",65,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0985899873257288,1.03299293008641,0.383269961977186,0.485112721861973,1
+"795",65,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.116001267427123,1.03299293008641,0.383269961977186,0.503098451110467,1
+"796",65,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.118551964512041,1.03299293008641,0.383269961977186,0.505733303165979,1
+"797",65,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0815114068441065,1.03299293008641,0.383269961977186,0.467470668968545,1
+"798",72,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0288339670468948,1.02334630350195,0.273764258555133,0.30327139214787,1
+"799",72,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0359632446134347,1.02334630350195,0.273764258555133,0.310567111992228,1
+"800",72,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0508555133079848,1.02334630350195,0.273764258555133,0.325807060111553,1
+"801",72,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.024160329531052,1.02334630350195,0.273764258555133,0.298488642472124,1
+"802",72,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0510931558935361,1.02334630350195,0.273764258555133,0.326050250773032,1
+"803",77,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00203316434305027,1.01806451612903,0.212927756653992,0.214997649127111,1
+"804",77,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.00388149556400507,1.01806451612903,0.212927756653992,0.216879369557218,1
+"805",77,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0189762005351359,1.01806451612903,0.212927756653992,0.232246753069763,1
+"806",77,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0115212646106182,1.01806451612903,0.212927756653992,0.224657147334996,1
+"807",77,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0150330939304323,1.01806451612903,0.212927756653992,0.2282324161522,1
+"808",92,"AP & TG","2007","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.51415293620617,1.03137254901961,0.0304182509505703,1.59207402437105,2
+"809",92,"AP & TG","2008","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.73072454583861,1.03137254901961,0.0304182509505703,1.81544003744295,2
+"810",92,"AP & TG","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.71329742289818,1.03137254901961,0.0304182509505703,1.7974661812338,2
+"811",92,"AP & TG","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.43779045204901,1.03137254901961,0.0304182509505703,1.51331585443641,2
+"812",92,"AP & TG","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",1.59584917617237,1.03137254901961,0.0304182509505703,1.67633328363031,2
+"813",97,"AP & TG","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0385377059569075,1.02734375,0.0266159695817491,0.0662074409359157,1
+"814",98,"OD","2009","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0125686523024926,1.03679369250986,0.425855513307985,0.438886612738559,1
+"815",98,"OD","2010","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0112132094071258,1.03679369250986,0.425855513307985,0.437481298094085,1
+"816",98,"OD","2011","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0115828756513167,1.03679369250986,0.425855513307985,0.437864565724396,1
+"817",98,"OD","2012","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0115828756513167,1.03679369250986,0.425855513307985,0.437864565724396,1
+"818",98,"OD","2013","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0114596535699197,1.03679369250986,0.425855513307985,0.437736809847626,1
+"819",103,"OD","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0458386142796789,1.03679369250986,0.425855513307985,0.473380699466548,1
+"820",103,"GJ","2010","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.26374006221915,1.02990388038448,0.0871068095402696,0.358733723032616,1
+"821",103,"OD","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0279714124771159,1.03679369250986,0.425855513307985,0.45485609733485,1
+"822",103,"GJ","2011","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.264697833851826,1.02990388038448,0.0871068095402696,0.359720135753631,1
+"823",103,"OD","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0665399239543726,1.03679369250986,0.425855513307985,0.494843686763964,1
+"824",103,"GJ","2012","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.357248818988363,1.02990388038448,0.0871068095402696,0.455038754479156,1
+"825",103,"OD","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0661702577101817,1.03679369250986,0.425855513307985,0.494460419133653,1
+"826",103,"GJ","2013","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.417941295080078,1.02990388038448,0.0871068095402696,0.517546171116157,1
+"827",103,"OD","2013","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.0888431206872272,1.03679369250986,0.425855513307985,0.517967500459394,1
+"828",103,"GJ","2014","Semi/Peri-Urban","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.421671563544187,1.02990388038448,0.0871068095402696,0.521387989082218,1
+"829",107,"AP & TG","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.280999155048585,1.03137254901961,0.0304182509505703,0.320233065765385,1
+"830",160,"MP","2008","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.273676242782707,1.03679369250986,0.0709759188846641,0.35472172119157,1
+"831",160,"MP","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.240652724968314,1.03679369250986,0.0709759188846641,0.320483146217121,1
+"832",160,"MP","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.254700042247571,1.03679369250986,0.0709759188846641,0.335047316168939,1
+"833",160,"MP","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.251003379805661,1.03679369250986,0.0709759188846641,0.331214639865829,1
+"834",160,"MP","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.237264117729897,1.03679369250986,0.0709759188846641,0.316969859605937,1
+"835",174,"TN","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.464762885509083,1.02734375,0,0.477471245659722,1
+"836",196,"MP","2008","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.253591043514998,1.03679369250986,0.0709759188846641,0.333897513278006,1
+"837",196,"MP","2009","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.284026897620054,1.03679369250986,0.0709759188846641,0.365453214840278,1
+"838",196,"MP","2010","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.269363469933812,1.03679369250986,0.0709759188846641,0.350250265504609,1
+"839",196,"MP","2011","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.247306717363752,1.03679369250986,0.0709759188846641,0.327381963562719,1
+"840",196,"MP","2012","Rural","rural","O and G specialist","Community Health Centre (CHC)","OBGYN_CHC",0.246937051119561,1.03679369250986,0.0709759188846641,0.326998695932408,1
+"841",2,"GJ","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.176135092820398,1.03904252846851,0.112726459405055,0.295738311601197,1
+"842",2,"GJ","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.288470140908074,1.03904252846851,0.112726459405055,0.412459204001848,1
+"843",2,"GJ","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.338309848654291,1.03904252846851,0.112726459405055,0.464244779956608,1
+"844",2,"GJ","2014","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.418679639156043,1.03904252846851,0.112726459405055,0.547752410292033,1
+"845",3,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.60002112378538,1.03137254901961,1.35361216730038,3.00383003222413,3
+"846",3,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.81780735107731,1.03137254901961,1.35361216730038,3.22844876860757,3
+"847",3,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.04435994930292,1.03137254901961,1.35361216730038,3.46210889932652,4
+"848",3,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.44381073088297,1.03137254901961,1.35361216730038,2.84271892111302,3
+"849",3,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.54795099281791,1.03137254901961,1.35361216730038,2.95012632852042,3
+"850",8,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.941429024081116,1.03299293008641,1.4212927756654,2.39378230171934,3
+"851",8,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.620928390367554,1.03299293008641,1.4212927756654,2.06270741300502,2
+"852",8,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.582557034220533,1.03299293008641,1.4212927756654,2.02307007338732,2
+"853",8,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.373954372623574,1.03299293008641,1.4212927756654,1.80758499876045,2
+"854",8,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.568140050697085,1.03299293008641,1.4212927756654,2.00817743133442,2
+"855",11,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.18319954935925,1.02921993216801,0.0283903675538657,2.27538285965463,3
+"856",11,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.77075059850725,1.02921993216801,0.0283903675538657,1.85088217843597,2
+"857",11,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.8416279397268,1.02921993216801,0.0283903675538657,1.9238305507582,2
+"858",11,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.89239543726236,1.02921993216801,0.0283903675538657,1.97608147112809,2
+"859",11,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.01140684410646,1.02921993216801,0.0283903675538657,1.06935045103939,1
+"860",15,"GJ","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.53114878186171,1.01806451612903,0.0532319391634981,0.593975666762064,1
+"861",15,"GJ","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.244349387410224,1.01806451612903,0.0532319391634981,0.301995380023713,1
+"862",15,"GJ","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.239358893113646,1.01806451612903,0.0532319391634981,0.296914734862423,1
+"863",15,"GJ","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.292590832277144,1.01806451612903,0.0532319391634981,0.35110828324952,1
+"864",15,"GJ","2014","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.329495845655542,1.01806451612903,0.0532319391634981,0.388679967837333,1
+"865",17,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.631131178707224,1.03299293008641,1.4212927756654,2.07324682122707,2
+"866",17,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.588878326996198,1.03299293008641,1.4212927756654,2.02959992413358,2
+"867",17,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.331812420785805,1.03299293008641,1.4212927756654,1.76405266045199,2
+"868",17,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.298653358681876,1.03299293008641,1.4212927756654,1.72979958373034,2
+"869",17,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.309299746514575,1.03299293008641,1.4212927756654,1.74079722709247,2
+"870",18,"MP","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.27743979721166,1.01859024012393,0.0365019011406844,0.319099370802445,1
+"871",18,"MP","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.335868187579214,1.01859024012393,0.0365019011406844,0.378613958976987,1
+"872",18,"MP","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.336945500633714,1.01859024012393,0.0365019011406844,0.379711299539858,1
+"873",18,"MP","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.31723700887199,1.01859024012393,0.0365019011406844,0.359636422183803,1
+"874",18,"MP","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.301204055766793,1.01859024012393,0.0365019011406844,0.343305412630486,1
+"875",22,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.275697084917617,1.03299293008641,1.4212927756654,1.70608591523073,2
+"876",22,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.308745247148289,1.03299293008641,1.4212927756654,1.74022443316736,2
+"877",22,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.39702154626109,1.03299293008641,1.4212927756654,1.83141322604508,2
+"878",22,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.473098859315589,1.03299293008641,1.4212927756654,1.91000055257035,2
+"879",22,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.569249049429658,1.03299293008641,1.4212927756654,2.00932301918465,2
+"880",23,"MP","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.287600337980566,1.03679369250986,0.0709759188846641,0.369158135266618,1
+"881",23,"MP","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.319884523306577,1.03679369250986,0.0709759188846641,0.402630174980445,1
+"882",23,"MP","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.354756372341924,1.03679369250986,0.0709759188846641,0.438785088106448,1
+"883",23,"MP","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.341078721306858,1.03679369250986,0.0709759188846641,0.424604185784942,1
+"884",23,"MP","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.337998169271934,1.03679369250986,0.0709759188846641,0.421410288865683,1
+"885",26,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.557034220532319,1.03137254901961,0.0304182509505703,0.604928054872139,1
+"886",26,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.645226024503591,1.03137254901961,0.0304182509505703,0.695886660536627,1
+"887",26,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.00221799746515,1.03137254901961,0.0304182509505703,1.06407838166952,1
+"888",26,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.18757921419518,1.03137254901961,0.0304182509505703,1.25525485225776,2
+"889",26,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.770806928601605,1.03137254901961,0.0304182509505703,0.825407357704383,1
+"890",29,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.593996782684996,1.02518740629685,1.09330213512723,1.70226015611674,2
+"891",29,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.654309252217998,1.02518740629685,1.09330213512723,1.76409174032463,2
+"892",29,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.764611972311592,1.02518740629685,1.09330213512723,1.87717269984487,2
+"893",29,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.718034025543531,1.02518740629685,1.09330213512723,1.82942157540709,2
+"894",29,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.666167007897046,1.02518740629685,1.09330213512723,1.77624816211374,2
+"895",32,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.6452154626109,1.03299293008641,1.4212927756654,2.08779578692489,2
+"896",32,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.674160329531052,1.03299293008641,1.4212927756654,2.1176956298157,2
+"897",32,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.715082382762991,1.03299293008641,1.4212927756654,2.15996782148891,2
+"898",32,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.745358048162231,1.03299293008641,1.4212927756654,2.19124236979999,2
+"899",32,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.769645120405577,1.03299293008641,1.4212927756654,2.21633074371986,3
+"900",38,"AP & TG","2007","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.419940853400929,1.02734375,0.0266159695817491,0.45803958069286,1
+"901",38,"AP & TG","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.334085868187579,1.02734375,0.0266159695817491,0.369836998227582,1
+"902",38,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.11130914659907,1.02734375,1.18441064638783,2.32610715246422,3
+"903",38,"AP & TG","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.420680185889311,1.02734375,0.0266159695817491,0.458799129303971,1
+"904",38,"GJ","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.100285171102662,1.02334630350195,0.0684410646387833,0.171067523782752,1
+"905",38,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.13958861427968,1.02734375,1.18441064638783,2.35515988683922,3
+"906",38,"AP & TG","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.456352978453739,1.02734375,0.0266159695817491,0.495447349790082,1
+"907",38,"GJ","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.102423954372624,1.02334630350195,0.0684410646387833,0.17325623973606,1
+"908",38,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.02083333333333,1.02734375,1.18441064638783,2.2331573911795,3
+"909",38,"AP & TG","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.284550591465991,1.02734375,0.0266159695817491,0.318947241283138,1
+"910",38,"GJ","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.119455006337136,1.02334630350195,0.0684410646387833,0.190684903808692,1
+"911",38,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.934054182509506,1.02734375,1.18441064638783,2.14400537295033,2
+"912",38,"GJ","2013","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0720057034220532,1.02334630350195,0.0684410646387833,0.142127835066799,1
+"913",38,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.14032794676806,1.02734375,1.18441064638783,2.35591943545033,3
+"914",38,"GJ","2014","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.120405576679341,1.02334630350195,0.0684410646387833,0.191657666454607,1
+"915",43,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.84278622729193,1.02734375,0.0266159695817491,1.91979088277619,2
+"916",43,"MP","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.561245775242924,1.02734375,0.0532319391634981,0.62982427857322,1
+"917",43,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.11643166455429,1.02734375,0.0266159695817491,2.20091881246369,3
+"918",43,"MP","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.642849598648078,1.02734375,0.0532319391634981,0.713659456524609,1
+"919",43,"OD","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.197833051682862,1.01806451612903,0.789607097591889,0.991013907627731,1
+"920",43,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.43175697084918,1.02734375,0.0266159695817491,2.52486629510258,3
+"921",43,"MP","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.646823510773131,1.02734375,0.0532319391634981,0.717742030309331,1
+"922",43,"OD","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.13985706238558,1.01806451612903,0.789607097591889,0.931990610136691,1
+"923",43,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.38098067173638,1.02734375,0.0266159695817491,1.44535783156092,2
+"924",43,"MP","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.61087346852556,1.02734375,0.0532319391634981,0.680808979094054,1
+"925",43,"OD","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0892743979721166,1.01806451612903,0.789607097591889,0.880494194366082,1
+"926",43,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.658560414026194,1.02734375,0.0266159695817491,0.703183894928971,1
+"927",43,"MP","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.734064744402197,1.02734375,0.0532319391634981,0.807368766420443,1
+"928",43,"OD","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.244595831573018,1.01806451612903,0.789607097591889,1.03862143450945,1
+"929",43,"OD","2013","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.256671595549923,1.01806451612903,0.789607097591889,1.05091534131949,1
+"930",49,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.41010773130545,1.03299293008641,1.4212927756654,1.84493116267771,2
+"931",49,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.387816856780735,1.03299293008641,1.4212927756654,1.82190484688823,2
+"932",49,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.262167300380228,1.03299293008641,1.4212927756654,1.69210974345802,2
+"933",49,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.246530418250951,1.03299293008641,1.4212927756654,1.67595695476988,2
+"934",49,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.297544359949303,1.03299293008641,1.4212927756654,1.72865399588012,2
+"935",54,"OD","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.80624207858048,1.02334630350195,1.01520912547529,2.86362027982029,3
+"936",54,"OD","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.95421419518378,1.02334630350195,1.01520912547529,3.01504699836763,3
+"937",54,"OD","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.5214670468948,1.02334630350195,1.01520912547529,3.59554310731705,4
+"938",54,"OD","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.04158745247148,1.02334630350195,1.01520912547529,3.10446009823793,3
+"939",54,"OD","2013","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",2.53532953105196,1.02334630350195,1.01520912547529,3.60972922923663,4
+"940",56,"GJ","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.13680291508238,1.02334630350195,0.0684410646387833,1.23178412559858,2
+"941",57,"MP","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.373907677940097,1.03478981155519,0.0672403442065239,0.454156199801195,1
+"942",57,"MP","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.398655860182776,1.03478981155519,0.0672403442065239,0.47976536664043,1
+"943",57,"MP","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.374141151357481,1.03478981155519,0.0672403442065239,0.454397795714773,1
+"944",57,"MP","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.412897738643186,1.03478981155519,0.0672403442065239,0.494502717368669,1
+"945",57,"MP","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.35978253618838,1.03478981155519,0.0672403442065239,0.439539647029745,1
+"946",60,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.09269645120406,1.03299293008641,1.4212927756654,2.5500404844897,3
+"947",60,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.03613751584284,1.03299293008641,1.4212927756654,2.49161550412835,3
+"948",60,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.841840937896071,1.03299293008641,1.4212927756654,2.29090851276935,3
+"949",60,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.656527249683143,1.03299293008641,1.4212927756654,2.09948078299716,2
+"950",60,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.71962927756654,1.03299293008641,1.4212927756654,2.16466473167483,2
+"951",63,"GJ","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0772602450359104,1.02734375,0.0798479087452472,0.159220738606358,1
+"952",63,"GJ","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.272351605407689,1.02734375,0.0798479087452472,0.359646628363303,1
+"953",63,"GJ","2014","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.401272708069286,1.02734375,0.0798479087452472,0.492092917425803,1
+"954",65,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.51211977186312,1.03299293008641,1.4212927756654,2.98330180944388,3
+"955",65,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.52731305449937,1.03299293008641,1.4212927756654,2.99899636299193,3
+"956",65,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.69399556400507,1.03299293008641,1.4212927756654,3.17117821688038,3
+"957",65,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.41707858048162,1.03299293008641,1.4212927756654,2.8851249306798,3
+"958",65,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.07273447401774,1.03299293008641,1.4212927756654,2.52941990318569,3
+"959",72,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.209838403041825,1.02334630350195,1.01520912547529,1.22994647956089,2
+"960",72,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.428311153358682,1.02334630350195,1.01520912547529,1.45351976101355,2
+"961",72,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.270041191381496,1.02334630350195,1.01520912547529,1.2915547804688,2
+"962",72,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.322718631178707,1.02334630350195,1.01520912547529,1.34546204376322,2
+"963",72,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.231859949302915,1.02334630350195,1.01520912547529,1.25248214752457,2
+"964",77,"AP & TG","2007","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.11660329531052,1.03137254901961,0.0304182509505703,0.150679688859067,1
+"965",77,"AP & TG","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.202365863962822,1.03137254901961,0.0304182509505703,0.239132847900461,1
+"966",77,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.247121884241656,1.01806451612903,0.789607097591889,1.04119311909726,1
+"967",77,"AP & TG","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.336501901140684,1.03137254901961,0.0304182509505703,0.377477074479982,1
+"968",77,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.369666244190959,1.01806451612903,0.789607097591889,1.16595118361339,2
+"969",77,"AP & TG","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.47581326573722,1.03137254901961,0.0304182509505703,0.521158991691311,1
+"970",77,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.22937790452049,1.01806451612903,0.789607097591889,1.02312860296823,1
+"971",77,"AP & TG","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.398077735530207,1.03137254901961,0.0304182509505703,0.440984699752313,1
+"972",77,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.407187367976341,1.01806451612903,0.789607097591889,1.20415010834458,2
+"973",77,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.53441416701873,1.01806451612903,0.789607097591889,1.33367519795031,2
+"974",82,"AP & TG","2007","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.384914976763836,1.02734375,0.0266159695817491,0.422055965241471,1
+"975",82,"MP","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.688635403464301,1.03137254901961,0.0608365019011407,0.771076153317263,1
+"976",82,"AP & TG","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.313846641318124,1.02734375,0.0266159695817491,0.349044354998416,1
+"977",82,"MP","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.14638783269962,1.03137254901961,0.0608365019011407,1.24318944307761,2
+"978",82,"AP & TG","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.288339670468948,1.02734375,0.0266159695817491,0.322839927915082,1
+"979",82,"MP","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.81516687790452,1.03137254901961,0.0608365019011407,0.901577242641881,1
+"980",82,"AP & TG","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.236124313476975,1.02734375,0.0266159695817491,0.26919680725536,1
+"981",82,"MP","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.733417828474863,1.03137254901961,0.0608365019011407,0.817263517151685,1
+"982",82,"AP & TG","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.274384769750739,1.02734375,0.0266159695817491,0.30850344788036,1
+"983",82,"MP","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.903992395437262,1.03137254901961,0.0608365019011407,0.993189443077611,1
+"984",86,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.556606463878327,1.03299293008641,1.4212927756654,1.99626331769211,2
+"985",86,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.463450570342205,1.03299293008641,1.4212927756654,1.90003393827341,2
+"986",86,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.751568441064639,1.03299293008641,1.4212927756654,2.19765766176124,2
+"987",86,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.553390367553866,1.03299293008641,1.4212927756654,1.99294111292646,2
+"988",86,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.596752217997465,1.03299293008641,1.4212927756654,2.03773359787017,2
+"989",91,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.44404309252218,1.03299293008641,1.4212927756654,1.87998615089452,2
+"990",91,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.471989860583017,1.03299293008641,1.4212927756654,1.90885496472013,2
+"991",91,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.584109632446134,1.03299293008641,1.4212927756654,2.02467389637763,2
+"992",91,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.765874524714829,1.03299293008641,1.4212927756654,2.21243574502911,3
+"993",91,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.780735107731306,1.03299293008641,1.4212927756654,2.22778662222209,3
+"994",92,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.921102661596958,1.03137254901961,0.0304182509505703,0.98041825095057,1
+"995",92,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.894064216307562,1.03137254901961,0.0304182509505703,0.952531540710919,1
+"996",92,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.06791297000422,1.03137254901961,0.0304182509505703,1.13183437295493,2
+"997",92,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.0063371356147,1.03137254901961,0.0304182509505703,1.0683267476826,1
+"998",98,"OD","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.45875580904098,1.03679369250986,1.57921419518378,2.05484932439972,2
+"999",98,"OD","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.382111674412055,1.03679369250986,1.57921419518378,1.97538516904857,2
+"1000",98,"OD","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.625475285171103,1.03679369250986,1.57921419518378,2.22770302566998,3
+"1001",98,"OD","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.699654978172089,1.03679369250986,1.57921419518378,2.30461206348572,3
+"1002",98,"OD","2013","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.917758062244754,1.03679369250986,1.57921419518378,2.53073996536921,3
+"1003",103,"OD","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.497570764681031,1.03679369250986,1.57921419518378,2.09509242558238,2
+"1004",103,"OD","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.335410505562597,1.03679369250986,1.57921419518378,1.92696569175262,2
+"1005",103,"OD","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.54340937896071,1.03679369250986,1.57921419518378,2.14261761174094,2
+"1006",103,"OD","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.10628784678214,1.03679369250986,1.57921419518378,2.72620645682781,3
+"1007",103,"OD","2013","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.930573158710041,1.03679369250986,1.57921419518378,2.54402657655332,3
+"1008",107,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.105196451204056,1.03137254901961,0.0304182509505703,0.138914982976714,1
+"1009",107,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0956907477820025,1.03137254901961,0.0304182509505703,0.129111061408087,1
+"1010",107,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.117553865652725,1.03137254901961,0.0304182509505703,0.15166008101593,1
+"1011",107,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.230988593155894,1.03137254901961,0.0304182509505703,0.268653545068217,1
+"1012",107,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.444550063371356,1.03137254901961,0.0304182509505703,0.488914982976714,1
+"1013",110,"MP","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0054217715814674,1.03679369250986,0.0709759188846641,0.0765971774625587,1
+"1014",110,"MP","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0110899873257288,1.03679369250986,0.0709759188846641,0.082473947793994,1
+"1015",110,"MP","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.00985776651175891,1.03679369250986,0.0709759188846641,0.0811963890262906,1
+"1016",110,"MP","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.0207013096746937,1.03679369250986,0.0709759188846641,0.0924389061820798,1
+"1017",121,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.555344317701732,1.03137254901961,0.0304182509505703,0.603185135482161,1
+"1018",121,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.678707224334601,1.03137254901961,0.0304182509505703,0.73041825095057,1
+"1019",121,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.699091677228559,1.03137254901961,0.0304182509505703,0.751442216092183,1
+"1020",121,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.911491339247993,1.03137254901961,0.0304182509505703,0.970505396920069,1
+"1021",121,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.12505280946346,1.03137254901961,0.0304182509505703,1.19076683482857,2
+"1022",126,"AP & TG","2007","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.631812420785805,1.03137254901961,0.0304182509505703,0.682052237878675,1
+"1023",126,"AP & TG","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.463878326996198,1.03137254901961,0.0304182509505703,0.50884962349959,1
+"1024",126,"AP & TG","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.500739332488382,1.03137254901961,0.0304182509505703,0.54686705269349,1
+"1025",126,"AP & TG","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.641529362061681,1.03137254901961,0.0304182509505703,0.69207402437105,1
+"1026",126,"AP & TG","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.931981411068864,1.03137254901961,0.0304182509505703,0.991638294523555,1
+"1027",137,"MP","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.634840163357274,1.03679369250986,0.0709759188846641,0.729174196005412,1
+"1028",137,"MP","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.676242782706661,1.03679369250986,0.0709759188846641,0.772100170600243,1
+"1029",137,"MP","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.776299112801014,1.03679369250986,0.0709759188846641,0.875837942537752,1
+"1030",137,"MP","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.745616814533164,1.03679369250986,0.0709759188846641,0.84402672922194,1
+"1031",137,"MP","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.61906773693846,1.03679369250986,0.0709759188846641,0.71282144377881,1
+"1032",142,"MP","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.30177087734122,1.03679369250986,0.0709759188846641,0.383850061095206,1
+"1033",142,"MP","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.308424869736657,1.03679369250986,0.0709759188846641,0.390748878440804,1
+"1034",142,"MP","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.211079425433038,1.03679369250986,0.0709759188846641,0.289821735792242,1
+"1035",142,"MP","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.19382833403746,1.03679369250986,0.0709759188846641,0.271935913044396,1
+"1036",142,"MP","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.1594493733277,1.03679369250986,0.0709759188846641,0.236292023425473,1
+"1037",153,"MP","2008","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.711237853823405,1.02734375,0.0532319391634981,0.783917703052387,1
+"1038",153,"MP","2009","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.824263307984791,1.02734375,0.0532319391634981,0.900033696975998,1
+"1039",153,"MP","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.961594317701732,1.02734375,0.0532319391634981,1.04111985148989,1
+"1040",153,"MP","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.04199672581327,1.02734375,0.0532319391634981,1.12372076294822,2
+"1041",153,"MP","2012","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.958359738065061,1.02734375,0.0532319391634981,1.03779682631628,1
+"1042",174,"TN","2010","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.910025876637093,1.02734375,0,0.934909396701389,1
+"1043",174,"TN","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.936087346852556,1.02734375,0,0.961683485243056,1
+"1044",180,"TN","2011","Rural","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",1.50760456273764,1.03137254901961,0,1.55490196078431,2
+"1045",224,"MP","2008","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.735635825940009,1.03679369250986,0.0709759188846641,0.833678503203543,1
+"1046",224,"MP","2009","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.74376848331221,1.03679369250986,0.0709759188846641,0.842110391070385,1
+"1047",224,"MP","2010","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.606252640473173,1.03679369250986,0.0709759188846641,0.699534832594695,1
+"1048",224,"MP","2011","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.619067736938459,1.03679369250986,0.0709759188846641,0.712821443778809,1
+"1049",224,"MP","2012","Semi/Peri-Urban","rural","Paedistrician","Community Health Centre (CHC)","Paed_CHC",0.697436980706943,1.03679369250986,0.0709759188846641,0.79407418140474,1

@@ -1,0 +1,9 @@
+"","Centre-Cadre Combination","N","R_C [95% CI]","Bias Correction Factor"
+"1","PHC-Nurses",23,"0.08 [0.01, 0.15]",0.15
+"2","PHC-Doctors",24,"0.85 [0.69, 0.93]",1
+"3","CHC-Nurses",25,"0.16 [0.07, 0.25]",0.21
+"4","CHC-GDMOs",25,"0.63 [0.32, 0.82]",0.99
+"5","CHC-Physicians",23,"0.39 [0.22, 0.55]",0.49
+"6","CHC-Surgeons",22,"0.51 [0.33, 0.65]",0.56
+"7","CHC-OBGYNs",23,"0.41 [0.24, 0.56]",0.49
+"8","CHC-Paediatricians",23,"0.4 [0.22, 0.55]",0.48

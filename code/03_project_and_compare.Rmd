@@ -1,0 +1,1655 @@
+---
+title: "WISN comparision"
+author: "Yash"
+date: "13/12/2020"
+output: html_document
+---
+# Workforce problems at rural public health-centres in India: A WISN retrospective analysis and national-level modelling study
+# ASAR
+
+Analyzing WISN for cadres at individual facility level (across year) for each state
+Calculating India stats
+
+
+```{r packages}
+library(reticulate)
+#use_python("/usr/local/bin/python")
+#use_virtualenv("myenv")
+library(tidyverse)
+
+library(ggplot2)
+
+library(maptools)
+library(rgeos)
+library(ggmap)
+library(scales)
+library(mapproj)
+library(sf)
+library(cowplot)
+
+library(RColorBrewer)
+set.seed(8000)
+
+```
+
+### India stats | maps
+* difference | P - WISN
+* ratio | P / WISN
+* difference | S - WISN
+
+. --------------------------------------------------
+> Cadre @ Facility
+for,
+  #     | Cadre           | Facility
+  ----- | -----           | -----
+  1     | OBGYN           | CHC
+  2     | Surgery         | CHC
+  3     | Eye             | CHC         ----- X
+  4     | Child           | CHC
+  5     | Medicine        | CHC
+  ----- | -----           | -----
+  6     | MO              | PHC
+  7     | MO              | CHC
+  8     | MO              | DH          - XXXXX
+  ----- | -----           | -----
+  9     | Nurses          | PHC
+  10    | Nurses          | CHC
+
+# Read Data
+
+```{r get data}
+# RHS 2019 data
+data_rhs <- read_csv("../data/RHS/RHS_Combined_2019.csv")
+as_tibble(data_rhs)
+
+data_rhs <- data_rhs %>% dplyr::select(ST,
+                                ###
+                                F_DH,
+                                F_SDH,
+                                F_CHC_R,
+                                F_PHC_R,
+                                #F_CHC_IPHS_R, # as per IPHS norms
+                                #F_PHC_IPHS_R,
+                                ###
+                                OBGY_CHC_R_S, OBGY_CHC_R_P, # OBGYN
+                                SUR_CHC_R_S, SUR_CHC_R_P, # Surgery
+                                PAED_CHC_R_S, PAED_CHC_R_P, # Child
+                                PHY_CHC_R_S, PHY_CHC_R_P, # Medical 
+                                DOC_PHC_R_S, DOC_PHC_R_P, # MO
+                                GDMO_AL_CHC_R_S, GDMO_AL_CHC_R_P, # MO
+                                DOC_DH_S, DOC_DH_P, # MO ?
+                                DOC_SDH_S, DOC_SDH_P, # MO ?
+                                NURSE_CHC_R_S, NURSE_CHC_R_P, # Nurses
+                                NURSE_PHC_R_S, NURSE_PHC_R_P # NUrses
+                                )
+
+data_wisn_avg <- read_csv("../analysis/Data_WISN_means.csv")
+data_wisn_avg
+
+```
+
+```{r RHS missing data}
+library(purrr)
+library(repurrrsive)
+library(data.table)
+
+# RHS 2019 data
+data_rhs <- read_csv("../data/RHS/RHS_Combined_2019.csv")
+#as_tibble(data_rhs)
+
+data_rhs <- data_rhs %>% dplyr::select(ST,
+                                ###
+                                F_DH,
+                                F_SDH,
+                                F_CHC_R,
+                                F_PHC_R,
+                                #F_CHC_IPHS_R, # as per IPHS norms
+                                #F_PHC_IPHS_R,
+                                ###
+                                OBGY_CHC_R_S, OBGY_CHC_R_P, # OBGYN
+                                SUR_CHC_R_S, SUR_CHC_R_P, # Surgery
+                                PAED_CHC_R_S, PAED_CHC_R_P, # Child
+                                PHY_CHC_R_S, PHY_CHC_R_P, # Medical 
+                                DOC_PHC_R_S, DOC_PHC_R_P, # MO
+                                GDMO_AL_CHC_R_S, GDMO_AL_CHC_R_P, # MO
+                                DOC_DH_S, DOC_DH_P, # MO ?
+                                DOC_SDH_S, DOC_SDH_P, # MO ?
+                                NURSE_CHC_R_S, NURSE_CHC_R_P, # Nurses
+                                NURSE_PHC_R_S, NURSE_PHC_R_P # NUrses
+                                )
+# removing *
+data_rhs <- within(data_rhs, ST[ST == 'Andhra Pradesh*'] <- 'Andhra Pradesh')
+data_rhs <- within(data_rhs, ST[ST == 'Telangana*'] <- 'Telangana')
+# replace "0" with NA | for center
+data_rhs <- within(data_rhs, F_CHC_R[F_CHC_R == 0] <- NA)
+data_rhs <- within(data_rhs, F_PHC_R[F_PHC_R == 0] <- NA)
+# col names
+rhs_col <- colnames(data_rhs)
+rhs_col <- rhs_col[-1]
+
+rhs_missing <- apply(is.na(data_rhs), 2, which)
+
+st_name <- c()
+n_missing <- c()
+for (i in rhs_missing) {
+  st_name <- append(st_name, 
+                    gsub("haracter0", "",
+                         gsub("[[:punct:]]", "",
+                              gsub("^c", "",
+                                   as.character(data_rhs[i, "ST"]))))
+                    )
+  n_missing <- append(n_missing, length(i))
+}
+st_name
+
+missing_df <- data.frame(
+  variable = rhs_col,
+  missing_count = n_missing[-1],
+  missing_state = st_name[-1]
+)
+missing_df <- missing_df[!missing_df$missing_count == 0,]
+
+write.csv(missing_df, "../analysis/Data_RHS_missing_data.csv")
+
+```
+
+### Compare
+```{r compare & store}
+
+# replace "0" with NA | for center
+data_rhs <- within(data_rhs, F_CHC_R[F_CHC_R == 0] <- NA)
+data_rhs <- within(data_rhs, F_PHC_R[F_PHC_R == 0] <- NA)
+
+data_compare <- data_rhs %>%
+  mutate(
+    OBGY_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'OBGY'],
+    SUR_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'SUR'],
+    PAED_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'PAED'],
+    PHY_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'PHY'],
+    DOC_PHC_R_WISN = F_PHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'DOC'],
+    GDMO_AL_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Cadre == 'GDMO'],
+    NURSE_CHC_R_WISN = F_CHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Centre == 'CHC' & data_wisn_avg$Cadre == 'NURSE'],
+    NURSE_PHC_R_WISN = F_PHC_R * data_wisn_avg$`Mean WISN-based need (rounded)`[data_wisn_avg$Centre == 'PHC' & data_wisn_avg$Cadre == 'NURSE'],
+    #,
+    OBGY_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'OBGY'],
+    SUR_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'SUR'],
+    PAED_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'PAED'],
+    PHY_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'PHY'],
+    DOC_PHC_R_WISN_Lower = F_PHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'DOC'],
+    GDMO_AL_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Cadre == 'GDMO'],
+    NURSE_CHC_R_WISN_Lower = F_CHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Centre == 'CHC' & data_wisn_avg$Cadre == 'NURSE'],
+    NURSE_PHC_R_WISN_Lower = F_PHC_R * data_wisn_avg$`Lower 95% CI (rounded)`[data_wisn_avg$Centre == 'PHC' & data_wisn_avg$Cadre == 'NURSE'],
+    #,
+    OBGY_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'OBGY'],
+    SUR_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'SUR'],
+    PAED_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'PAED'],
+    PHY_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'PHY'],
+    DOC_PHC_R_WISN_Upper = F_PHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'DOC'],
+    GDMO_AL_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Cadre == 'GDMO'],
+    NURSE_CHC_R_WISN_Upper = F_CHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Centre == 'CHC' & data_wisn_avg$Cadre == 'NURSE'],
+    NURSE_PHC_R_WISN_Upper = F_PHC_R * data_wisn_avg$`Upper 95% CI (rounded)`[data_wisn_avg$Centre == 'PHC' & data_wisn_avg$Cadre == 'NURSE'],
+    #,
+    # OBGYN
+    OBGY_CHC_R_P_WISN_diff = OBGY_CHC_R_P - OBGY_CHC_R_WISN,
+    OBGY_CHC_R_P_WISN_ratio = OBGY_CHC_R_P / OBGY_CHC_R_WISN,
+    OBGY_CHC_R_S_WISN_diff = OBGY_CHC_R_S - OBGY_CHC_R_WISN,
+    OBGY_CHC_R_P_WISN_diff_per_centre = OBGY_CHC_R_P_WISN_diff / F_CHC_R,
+    OBGY_CHC_R_S_WISN_diff_per_centre = OBGY_CHC_R_S_WISN_diff / F_CHC_R,
+    # Surgery
+    SUR_CHC_R_P_WISN_diff = SUR_CHC_R_P - SUR_CHC_R_WISN,
+    SUR_CHC_R_P_WISN_ratio = SUR_CHC_R_P / SUR_CHC_R_WISN,
+    SUR_CHC_R_S_WISN_diff = SUR_CHC_R_S - SUR_CHC_R_WISN,
+    SUR_CHC_R_P_WISN_diff_per_centre = SUR_CHC_R_P_WISN_diff / F_CHC_R,
+    SUR_CHC_R_S_WISN_diff_per_centre = SUR_CHC_R_S_WISN_diff / F_CHC_R,
+    # Child
+    PAED_CHC_R_P_WISN_diff = PAED_CHC_R_P - PAED_CHC_R_WISN,
+    PAED_CHC_R_P_WISN_ratio = PAED_CHC_R_P / PAED_CHC_R_WISN,
+    PAED_CHC_R_S_WISN_diff = PAED_CHC_R_S - PAED_CHC_R_WISN,
+    PAED_CHC_R_P_WISN_diff_per_centre = PAED_CHC_R_P_WISN_diff / F_CHC_R,
+    PAED_CHC_R_S_WISN_diff_per_centre = PAED_CHC_R_S_WISN_diff / F_CHC_R,
+    # Medicine
+    PHY_CHC_R_P_WISN_diff = PHY_CHC_R_P - PHY_CHC_R_WISN, 
+    PHY_CHC_R_P_WISN_ratio = PHY_CHC_R_P / PHY_CHC_R_WISN,
+    PHY_CHC_R_S_WISN_diff = PHY_CHC_R_S - PHY_CHC_R_WISN,
+    PHY_CHC_R_P_WISN_diff_per_centre = PHY_CHC_R_P_WISN_diff / F_CHC_R,
+    PHY_CHC_R_S_WISN_diff_per_centre = PHY_CHC_R_S_WISN_diff / F_CHC_R,
+    # MO | PHC
+    DOC_PHC_R_P_WISN_diff = DOC_PHC_R_P - DOC_PHC_R_WISN,
+    DOC_PHC_R_P_WISN_ratio = DOC_PHC_R_P / DOC_PHC_R_WISN,
+    DOC_PHC_R_S_WISN_diff = DOC_PHC_R_S - DOC_PHC_R_WISN,
+    DOC_PHC_R_P_WISN_diff_per_centre = DOC_PHC_R_P_WISN_diff / F_PHC_R,
+    DOC_PHC_R_S_WISN_diff_per_centre = DOC_PHC_R_S_WISN_diff / F_PHC_R,
+    # MO | CHC
+    GDMO_AL_CHC_R_P_WISN_diff = GDMO_AL_CHC_R_P - GDMO_AL_CHC_R_WISN,
+    GDMO_AL_CHC_R_P_WISN_ratio = GDMO_AL_CHC_R_P / GDMO_AL_CHC_R_WISN,
+    GDMO_AL_CHC_R_S_WISN_diff = GDMO_AL_CHC_R_S - GDMO_AL_CHC_R_WISN,
+    GDMO_AL_CHC_R_P_WISN_diff_per_centre = GDMO_AL_CHC_R_P_WISN_diff / F_CHC_R,
+    GDMO_AL_CHC_R_S_WISN_diff_per_centre = GDMO_AL_CHC_R_S_WISN_diff / F_CHC_R,
+    # Nurse | CHC
+    NURSE_CHC_R_P_WISN_diff = NURSE_CHC_R_P - NURSE_CHC_R_WISN,
+    NURSE_CHC_R_P_WISN_ratio = NURSE_CHC_R_P / NURSE_CHC_R_WISN,
+    NURSE_CHC_R_S_WISN_diff = NURSE_CHC_R_S - NURSE_CHC_R_WISN,
+    NURSE_CHC_R_P_WISN_diff_per_centre = NURSE_CHC_R_P_WISN_diff / F_CHC_R,
+    NURSE_CHC_R_S_WISN_diff_per_centre = NURSE_CHC_R_S_WISN_diff / F_CHC_R,
+    # Nurse | PHC
+    NURSE_PHC_R_P_WISN_diff = NURSE_PHC_R_P - NURSE_PHC_R_WISN,
+    NURSE_PHC_R_P_WISN_ratio = NURSE_PHC_R_P / NURSE_PHC_R_WISN,
+    NURSE_PHC_R_S_WISN_diff = NURSE_PHC_R_S - NURSE_PHC_R_WISN,
+    NURSE_PHC_R_P_WISN_diff_per_centre = NURSE_PHC_R_P_WISN_diff / F_PHC_R,
+    NURSE_PHC_R_S_WISN_diff_per_centre = NURSE_PHC_R_S_WISN_diff / F_PHC_R,
+    )
+
+write.csv(data_compare, "../analysis/Data_RHS_WISN_comparision.csv")
+
+```
+
+```{r WISN interpretation labels}
+#data_compare <- read_csv("../analysis/Data_RHS_WISN_comparision.csv")
+
+#Sanctioning difference | "_sanctioning_problem"
+label_s_wisn_difference <- function(x){
+  ifelse(x < 0, "Under sanctioning",
+          ifelse(x == 0, "Optimal sanctioning", "Over sanctioning"))
+  }
+#label_s_wisn_difference(data_compare$DOC_PHC_R_S_WISN_diff)
+label_S_diff_df <- as.data.frame(label_s_wisn_difference(data_compare[grepl("_S_WISN_diff", names(data_compare))]))
+names(label_S_diff_df) <- gsub("_diff$", "_diff_sanctioning_problem", names(label_S_diff_df), fixed = FALSE)
+names(label_S_diff_df) <- gsub("_centre$", "_centre_sanctioning_problem", names(label_S_diff_df), fixed = FALSE)
+
+#Positioning difference | "_workforce_problem"
+label_p_wisn_difference <- function(x){
+  ifelse(x < 0, "Shortage",
+          ifelse(x == 0, "Balance", "Surplus"))
+  }
+#label_p_wisn_difference(data_compare$DOC_PHC_R_P_WISN_diff)
+label_P_diff_df <- as.data.frame(label_p_wisn_difference(data_compare[grepl("_P_WISN_diff", names(data_compare))]))
+names(label_P_diff_df) <- gsub("_diff$", "_diff_workforce_problem", names(label_P_diff_df), fixed = FALSE)
+names(label_P_diff_df) <- gsub("_centre$", "_centre_workforce_problem", names(label_P_diff_df), fixed = FALSE)
+
+#Position ratio | "_workload_pressure"
+label_p_wisn_ratio <- function(x){
+  ifelse(x > 1, "None",
+          ifelse(x == 1, "Normal",
+                 ifelse(x > 0.75, "Low",
+                        ifelse(x > 0.5, "Medium",
+                               ifelse(x > 0.25, "High", "Very High")))))
+  }
+#label_p_wisn_ratio(data_compare$DOC_PHC_R_S_WISN_diff)
+label_P_ratio_df <- as.data.frame(label_p_wisn_ratio(data_compare[grepl("_P_WISN_ratio", names(data_compare))]))
+names(label_P_ratio_df) <- gsub("_ratio$", "_ratio_workforce_pressure", names(label_P_ratio_df), fixed = FALSE)
+
+# add label to main file
+data_compare_label <- cbind(data_compare, label_P_diff_df, label_P_ratio_df, label_S_diff_df)
+
+write.csv(data_compare_label, "../analysis/Data_RHS_WISN_comparision.csv")
+
+```
+
+```{r dictionary}
+#data_compare <- read_csv("../analysis/Data_RHS_WISN_comparision.csv")
+data_dict <- colnames(data_compare_label)
+#data_dict <- data_dict[-1]
+data_dictnames <- c(
+  "State",
+  "Number of functional District hospitals", "Number of functional Sub divisional hospitals",
+  "Number of functional CHCs Rural", "Number of functional PHCs Rural",
+  # basic|simple
+  "Sanctioned OBGYs at rural CHCs", "In position OBGYs at rural CHCs",
+  "Sanctioned Surgeons at rural CHCs", "In position Surgeons at rural CHCs",
+  "Sanctioned Paediatricians at rural CHCs", "In position Paediatricians at rural CHCs",
+  "Sanctioned Physicians at rural CHCs", "In position Physicians at rural CHCs",
+  "Sanctioned Doctors at rural PHCs", "In Position Doctors at rural PHCs",
+  "Sanctioned GDMO Allopathic at rural CHCs", "In Position GDMO Allopathic at rural CHCs",
+  "Sanctioned Doctors at District hospitals", "In Position Doctors at District hospitals",
+  "Sanctioned Doctors at Sub divisional hospitals", "In position Doctors at Sub divisional hospitals",
+  "Sanctioned Nursing staff at rural CHCs", "In Position Nursing staff at rural CHCs",
+  "Sanctioned Nursing staff at rural PHCs", "In Position Nursing staff at rural PHCs",
+  # WISN need
+  "WISN based required OBGYs at rural CHCs",
+  "WISN based required Surgeons at rural CHCs",
+  "WISN based required Paediatricians at rural CHCs",
+  "WISN based required Physicians at rural CHCs",
+  "WISN based required Doctors at rural PHCs",
+  "WISN based required GDMO Allopathic at rural CHCs",
+  "WISN based required Nursing staff at rural CHCs",
+  "WISN based required Nursing staff at rural PHCs",
+  # WISN need _Lower
+  "WISN based required OBGYs (Lower 95% CI) at rural CHCs",
+  "WISN based required Surgeons (Lower 95% CI) at rural CHCs",
+  "WISN based required Paediatricians (Lower 95% CI) at rural CHCs",
+  "WISN based required Physicians (Lower 95% CI) at rural CHCs",
+  "WISN based required Doctors (Lower 95% CI) at rural PHCs",
+  "WISN based required GDMO Allopathic (Lower 95% CI) at rural CHCs",
+  "WISN based required Nursing staff (Lower 95% CI) at rural CHCs",
+  "WISN based required Nursing staff (Lower 95% CI) at rural PHCs",
+  # WISN need _Upper
+  "WISN based required OBGYs (Upper 95% CI) at rural CHCs",
+  "WISN based required Surgeons (Upper 95% CI) at rural CHCs",
+  "WISN based required Paediatricians (Upper 95% CI) at rural CHCs",
+  "WISN based required Physicians (Upper 95% CI) at rural CHCs",
+  "WISN based required Doctors (Upper 95% CI) at rural PHCs",
+  "WISN based required GDMO Allopathic (Upper 95% CI) at rural CHCs",
+  "WISN based required Nursing staff (Upper 95% CI) at rural CHCs",
+  "WISN based required Nursing staff (Upper 95% CI) at rural PHCs",
+  # OBGY
+  "WISN difference of OBGYs at rural CHCs",
+  "WISN ratio of OBGYs at rural CHCs",
+  "Sanctioning difference of OBGYs at rural CHCs",
+  "WISN difference (per Centre) of OBGYs at rural CHCs",
+  "Sanctioning difference (per Centre) ofOBGYs at rural CHCs",
+  # SUR
+  "WISN difference of Surgeons at rural CHCs",
+  "WISN ratio of Surgeons at rural CHCs",
+  "Sanctioning difference of Surgeons at rural CHCs",
+  "WISN difference (per Centre) of Surgeons at rural CHCs",
+  "Sanctioning difference (per Centre) ofSurgeons at rural CHCs",
+  # PAED
+  "WISN difference of Paediatricians at rural CHCs",
+  "WISN ratio of Paediatricians at rural CHCs",
+  "Sanctioning difference of Paediatricians at rural CHCs",
+  "WISN difference (per Centre) of Paediatricians at rural CHCs",
+  "Sanctioning difference (per Centre) ofPaediatricians at rural CHCs",
+  # PHY
+  "WISN difference of Physicians at rural CHCs",
+  "WISN ratio of Physicians at rural CHCs",
+  "Sanctioning difference of Physicians at rural CHCs",
+  "WISN difference (per Centre) of Physicians at rural CHCs",
+  "Sanctioning difference (per Centre) ofPhysicians at rural CHCs",
+  # Doc
+  "WISN difference of Doctors at rural PHCs",
+  "WISN ratio of Doctors at rural PHCs",
+  "Sanctioning difference of Doctors at rural PHCs",
+  "WISN difference (per Centre) of Doctors at rural PHCs",
+  "Sanctioning difference (per Centre) ofDoctors at rural PHCs",
+  # GDMO
+  "WISN difference of GDMO Allopathic at rural CHCs",
+  "WISN ratio of GDMO Allopathic at rural CHCs",
+  "Sanctioning difference of GDMO Allopathic at rural CHCs",
+  "WISN difference (per Centre) of GDMO Allopathic at rural CHCs",
+  "Sanctioning difference (per Centre) ofGDMO Allopathic at rural CHCs",
+  # Nurse CHC
+  "WISN difference of Nursing staff at rural CHCs",
+  "WISN ratio of Nursing staff at rural CHCs",
+  "Sanctioning difference of Nursing staff at rural CHCs",
+  "WISN difference (per Centre) of Nursing staff at rural CHCs",
+  "Sanctioning difference (per Centre) ofNursing staff at rural CHCs",
+  # Nurse PHC
+  "WISN difference of Nursing staff at rural PHCs",
+  "WISN ratio of Nursing staff at rural PHCs",
+  "Sanctioning difference of Nursing staff at rural PHCs",
+  "WISN difference (per Centre) of Nursing staff at rural PHCs",
+  "Sanctioning difference (per Centre) ofNursing staff at rural PHCs",
+  # P_WISN diff label(s) # --------------------------------------------------
+  "Workforce problem based on WISN difference of OBGYs at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of OBGYs at rural CHCs",
+  "Workforce problem based on WISN difference of Surgeons at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of Surgeons at rural CHCs",
+  "Workforce problem based on WISN difference of Paediatricians at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of Paediatricians at rural CHCs",
+  "Workforce problem based on WISN difference of Physicians at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of Physicians at rural CHCs",
+  "Workforce problem based on WISN difference of Doctors at rural PHCs",
+  "Workforce problem based on WISN difference (per Centre) of Doctors at rural PHCs",
+  "Workforce problem based on WISN difference of GDMO Allopathic at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of GDMO Allopathic at rural CHCs",
+  "Workforce problem based on WISN difference of Nursing staff at rural CHCs",
+  "Workforce problem based on WISN difference (per Centre) of Nursing staff at rural CHCs",
+  "Workforce problem based on WISN difference of Nursing staff at rural PHCs",
+  "Workforce problem based on WISN difference (per Centre) of Nursing staff at rural PHCs",
+  # P_ratio label(s) # --------------------------------------------------
+  "Workforce pressure based on WISN ratio of OBGYs at rural CHCs",
+  "Workforce pressure based on WISN ratio of Surgeons at rural CHCs",
+  "Workforce pressure based on WISN ratio of Paediatricians at rural CHCs",
+  "Workforce pressure based on WISN ratio of Physicians at rural CHCs",
+  "Workforce pressure based on WISN ratio of Doctors at rural PHCs",
+  "Workforce pressure based on WISN ratio of GDMO Allopathic at rural CHCs",
+  "Workforce pressure based on WISN ratio of Nursing staff at rural CHCs",
+  "Workforce pressure based on WISN ratio of Nursing staff at rural PHCs",
+  # S_WISN diff label(s) # --------------------------------------------------
+  "Sanctioning problem based on Sanctioning difference of OBGYs at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of OBGYs at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Surgeons at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Surgeons at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Paediatricians at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Paediatricians at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Physicians at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Physicians at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Doctors at rural PHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Doctors at rural PHCs",
+  "Sanctioning problem based on Sanctioning difference of GDMO Allopathic at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of GDMO Allopathic at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Nursing staff at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Nursing staff at rural CHCs",
+  "Sanctioning problem based on Sanctioning difference of Nursing staff at rural PHCs",
+  "Sanctioning problem based on Sanctioning difference (per Centre) of Nursing staff at rural PHCs"
+)
+
+# cbind
+#dict_df <- data.frame("variable" = data_dict)#,
+#                      "name" = data_dictnames)
+#dict_df <- dict_df %>%
+#  mutate( name = data_dictnames)
+dict_list <- list(variable = data_dict,
+                  name = data_dictnames)
+dict_df <- data.frame(lapply(dict_list, "length<-", max(lengths(dict_list))))
+
+write.csv(dict_df, "../analysis/Data_RHS_WISN_comparision_Labels.csv")
+
+```
+
+### Plot | Maps
+```{r Maps}
+data_compare <- read_csv("../analysis/Data_RHS_WISN_comparision.csv")
+# replace INF with NA | for plotting
+data_compare[sapply(data_compare, is.infinite)] <- NA
+# removed "India"
+data_compare <- data_compare[!(data_compare$ST == "All India"),]
+data_rhs_I <- data_rhs[!(data_rhs$ST == "All India"),]
+
+# removing *
+data_compare <- within(data_compare, ST[ST == 'Andhra Pradesh*'] <- 'Andhra Pradesh')
+data_compare <- within(data_compare, ST[ST == 'Telangana*'] <- 'Telangana')
+data_compare <- rename(data_compare, State = ST)
+
+# Maps
+shp <- readShapeSpatial("../analysis/maps/india/india.shp")
+#plot(shp)
+names(shp)
+print(shp$ST_NM)
+shp.f <- fortify(shp, region = "ST_NM")
+# renaming
+# removing *
+data_compare <- within(data_compare, State[State == 'A& N Islands'] <- 'Andaman & Nicobar Island')
+data_compare <- within(data_compare, State[State == 'Arunachal Pradesh'] <- 'Arunanchal Pradesh')
+data_compare <- within(data_compare, State[State == 'D & N Haveli'] <- 'Dadara & Nagar Havelli')
+data_compare <- within(data_compare, State[State == 'Delhi'] <- 'NCT of Delhi')
+
+# state names for plot label
+cntrd <- coordinates(shp)
+coord_df <- data.frame(
+  #id = shp$ST_NM,
+  id = c('AN', 'AR', 'AS', 'BR',
+         'CH', 'CG', 'DH', 'DD',
+         'GA', 'GJ', 'HR', 'HP',
+         'JK', 'JH', 'KA', 'KL',
+         'LD', 'MP', 'MH', 'MN',
+         'ML', 'MZ', 'NL', 'DL',
+         'PY', 'PB', 'RJ', 'SK',
+         'TN', 'TG', 'TR', 'UP',
+         'UK', 'WB', 'OR', 'AP'),
+  long = cntrd[,1],
+  lat = cntrd[,2])
+coord_df <- within(coord_df, long[id == 'DD'] <- 72.85235*0.99)
+coord_df <- within(coord_df, lat[id == 'DH'] <- 20.19505*0.98)
+coord_df <- within(coord_df, long[id == 'GA'] <- 74.05458*0.99)
+coord_df <- within(coord_df, long[id == 'PY'] <- 79.75651*1.01)
+#coord_df <- within(coord_df, id[id == 'NCT of Delhi'] <- 'Delhi')
+```
+
+```{r Panels}
+# ==================================================================================================== 
+# Map | P WISN diff
+# ====================================================================================================
+### OBGYN | CHC                                                                 # ====================
+plot_df <- data_compare %>% dplyr::select(State, OBGY_CHC_R_P_WISN_diff)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = OBGY_CHC_R_P_WISN_diff)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_OBGY_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("OBGYNs at CHC") +                                                     # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### SUR | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, SUR_CHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = SUR_CHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_SUR_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Surgeons at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PAED | CHC                                                                  # ====================
+plot_df <- data_compare %>% dplyr::select(State, PAED_CHC_R_P_WISN_diff)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PAED_CHC_R_P_WISN_diff)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PAED_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Paediatricians at CHC") +                                                      # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PHY | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, PHY_CHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PHY_CHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PHY_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Physicians at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### DOC | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, DOC_PHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = DOC_PHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_DOC_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Doctors at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### GDMO_AL | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, GDMO_AL_CHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = GDMO_AL_CHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_GDMO_AL_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("GDMOs at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_CHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_CHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_PHC_R_P_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_PHC_R_P_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# ===========================================================================
+plot_grid(p_NURSE_PHC,
+          p_DOC_PHC,
+          p_NURSE_CHC,
+          p_GDMO_AL_CHC,
+          p_OBGY_CHC,
+          p_SUR_CHC,
+          p_PAED_CHC,
+          p_PHY_CHC,
+          ncol = 4, labels = "AUTO")
+
+ggsave("../analysis/Map_P_WISN_diff_panel.png",dpi = 300, width = 90, height = 40, units = "cm")
+
+# ==================================================================================================== 
+# Map | P WISN diff per capita
+# ====================================================================================================
+### OBGYN | CHC                                                                 # ====================
+plot_df <- data_compare %>% dplyr::select(State, OBGY_CHC_R_P_WISN_diff_per_centre)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = OBGY_CHC_R_P_WISN_diff_per_centre)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_OBGY_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("OBGYNs at CHC") +                                                     # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### SUR | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, SUR_CHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = SUR_CHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_SUR_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Surgeons at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PAED | CHC                                                                  # ====================
+plot_df <- data_compare %>% dplyr::select(State, PAED_CHC_R_P_WISN_diff_per_centre)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PAED_CHC_R_P_WISN_diff_per_centre)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PAED_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Paediatricians at CHC") +                                                      # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PHY | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, PHY_CHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PHY_CHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PHY_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Physicians at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### DOC | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, DOC_PHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = DOC_PHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_DOC_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Doctors at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### GDMO_AL | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, GDMO_AL_CHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = GDMO_AL_CHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_GDMO_AL_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("GDMOs at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_CHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_CHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_PHC_R_P_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_PHC_R_P_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN difference \n (per Centre)",
+                       low = "orangered",
+                       mid = "white",
+                       high = "royalblue",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# ===========================================================================
+plot_grid(p_NURSE_PHC,
+          p_DOC_PHC,
+          p_NURSE_CHC,
+          p_GDMO_AL_CHC,
+          p_OBGY_CHC,
+          p_SUR_CHC,
+          p_PAED_CHC,
+          p_PHY_CHC,
+          ncol = 4, labels = "AUTO")
+
+ggsave("../analysis/Map_P_WISN_diff_per_centre_panel.png",dpi = 300, width = 90, height = 40, units = "cm")
+
+# ==================================================================================================== 
+# Map | P WISN ratio
+# ====================================================================================================
+### OBGYN | CHC                                                                 # ====================
+plot_df <- data_compare %>% dplyr::select(State, OBGY_CHC_R_P_WISN_ratio)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = OBGY_CHC_R_P_WISN_ratio)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_OBGY_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("OBGYNs at CHC") +                                                     # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### SUR | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, SUR_CHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = SUR_CHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_SUR_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Surgeons at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PAED | CHC                                                                  # ====================
+plot_df <- data_compare %>% dplyr::select(State, PAED_CHC_R_P_WISN_ratio)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PAED_CHC_R_P_WISN_ratio)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PAED_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Paediatricians at CHC") +                                                      # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PHY | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, PHY_CHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PHY_CHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PHY_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Physicians at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### DOC | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, DOC_PHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = DOC_PHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_DOC_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Doctors at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### GDMO_AL | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, GDMO_AL_CHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = GDMO_AL_CHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_GDMO_AL_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("GDMOs at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_CHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_CHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_PHC_R_P_WISN_ratio)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_PHC_R_P_WISN_ratio)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="WISN ratio",
+                       low = "white",
+                       mid = "forestgreen",
+                       high = "forestgreen",
+                       midpoint = 1,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# ===========================================================================
+plot_grid(p_NURSE_PHC,
+          p_DOC_PHC,
+          p_NURSE_CHC,
+          p_GDMO_AL_CHC,
+          p_OBGY_CHC,
+          p_SUR_CHC,
+          p_PAED_CHC,
+          p_PHY_CHC,
+          ncol = 4, labels = "AUTO")
+
+ggsave("../analysis/Map_P_WISN_ratio_panel.png",dpi = 300, width = 90, height = 40, units = "cm")
+
+# ==================================================================================================== 
+# Map | S WISN diff
+# ====================================================================================================
+### OBGYN | CHC                                                                 # ====================
+plot_df <- data_compare %>% dplyr::select(State, OBGY_CHC_R_S_WISN_diff)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = OBGY_CHC_R_S_WISN_diff)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_OBGY_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("OBGYNs at CHC") +                                                     # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### SUR | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, SUR_CHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = SUR_CHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_SUR_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Surgeons at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PAED | CHC                                                                  # ====================
+plot_df <- data_compare %>% dplyr::select(State, PAED_CHC_R_S_WISN_diff)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PAED_CHC_R_S_WISN_diff)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PAED_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Paediatricians at CHC") +                                                      # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PHY | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, PHY_CHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PHY_CHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PHY_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Physicians at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### DOC | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, DOC_PHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = DOC_PHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_DOC_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Doctors at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### GDMO_AL | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, GDMO_AL_CHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = GDMO_AL_CHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_GDMO_AL_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("GDMOs at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_CHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_CHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_PHC_R_S_WISN_diff)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_PHC_R_S_WISN_diff)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# ===========================================================================
+plot_grid(p_NURSE_PHC,
+          p_DOC_PHC,
+          p_NURSE_CHC,
+          p_GDMO_AL_CHC,
+          p_OBGY_CHC,
+          p_SUR_CHC,
+          p_PAED_CHC,
+          p_PHY_CHC,
+          ncol = 4, labels = "AUTO")
+
+ggsave("../analysis/Map_S_WISN_diff_panel.png",dpi = 300, width = 90, height = 40, units = "cm")
+
+# ==================================================================================================== 
+# Map | S WISN diff per capita
+# ====================================================================================================
+### OBGYN | CHC                                                                 # ====================
+plot_df <- data_compare %>% dplyr::select(State, OBGY_CHC_R_S_WISN_diff_per_centre)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = OBGY_CHC_R_S_WISN_diff_per_centre)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_OBGY_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("OBGYNs at CHC") +                                                     # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### SUR | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, SUR_CHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = SUR_CHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_SUR_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Surgeons at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PAED | CHC                                                                  # ====================
+plot_df <- data_compare %>% dplyr::select(State, PAED_CHC_R_S_WISN_diff_per_centre)               # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PAED_CHC_R_S_WISN_diff_per_centre)                      # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PAED_CHC <- ggplot() +
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Paediatricians at CHC") +                                                      # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### PHY | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, PHY_CHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = PHY_CHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_PHY_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Physicians at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### DOC | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, DOC_PHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = DOC_PHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_DOC_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Doctors at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### GDMO_AL | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, GDMO_AL_CHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = GDMO_AL_CHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_GDMO_AL_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("GDMOs at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | CHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_CHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_CHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_CHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at CHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+### NURSE | PHC                                                                   # ====================
+plot_df <- data_compare %>% dplyr::select(State, NURSE_PHC_R_S_WISN_diff_per_centre)                # ----------
+plot_df <- rename(plot_df, id = State)
+plot_df <- rename(plot_df, count = NURSE_PHC_R_S_WISN_diff_per_centre)                       # ----------
+# merging data
+merge.shp.coef <- merge(shp.f, plot_df, by="id", all.x=TRUE)
+final.plot <- merge.shp.coef[order(merge.shp.coef$order), ]
+# draw map
+p_NURSE_PHC <- ggplot() +                                                        # ----------
+  geom_polygon(data = final.plot,
+               aes(x = long, y = lat, group = group, fill = count), 
+               color = "black", size = 0.25) + 
+  coord_map() +
+  scale_fill_gradient2(name="Sanctioning difference \n (per Centre)",
+                       low = "darkorange",
+                       mid = "white",
+                       high = "forestgreen",
+                       midpoint = 0,
+                       space = "Lab",
+                       na.value = "grey50",
+                       guide = "colourbar",
+                       aesthetics = "fill") +
+  ggtitle("Nurses at PHC") +                                                       # ----------
+  geom_text(data=coord_df, aes(long, lat, label = id), size=3) +
+  xlab('') + ylab('') +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# ===========================================================================
+plot_grid(p_NURSE_PHC,
+          p_DOC_PHC,
+          p_NURSE_CHC,
+          p_GDMO_AL_CHC,
+          p_OBGY_CHC,
+          p_SUR_CHC,
+          p_PAED_CHC,
+          p_PHY_CHC,
+          ncol = 4, labels = "AUTO")
+
+ggsave("../analysis/Map_S_WISN_diff_per_centre_panel.png",dpi = 300, width = 90, height = 40, units = "cm")
+
+```
+
+
+
+# ...
+

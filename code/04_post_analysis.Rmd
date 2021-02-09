@@ -1,0 +1,206 @@
+---
+title: "WISN post analysis"
+author: "Siddhesh"
+date: "13/12/2020"
+output: html_document
+---
+# Workforce problems at rural public health-centres in India: A WISN retrospective analysis and national-level modelling study
+# ASAR
+
+some post analysis
+
+``````{r @Siddhesh}
+#Get packages
+library(geepack)
+library(tidyverse)
+library(ggplot2)
+library(ggstatsplot)
+library(broom)
+library(doBy)
+library(emmeans)
+library(data.table)
+library(stringr)
+library(forcats)
+library(GGally)
+library(ggpubr)
+library(cowplot)
+library(pastecs)
+library(ppcor)
+library(corrplot)
+library(yardstick)
+library(DescTools)
+```
+
+``````{r RHS-WISN post-analysis @Siddhesh}
+#Getting data
+wisn.rhs <- read.csv("../analysis/data_RHS_WISN_comparision.csv")
+
+#Some transformations
+wisn.rhs$ST[wisn.rhs$ST == "Andhra Pradesh*"] <-"Andhra Pradesh"
+wisn.rhs$ST[wisn.rhs$ST == "Telangana*"] <- "Telangana" 
+wisn.states <- wisn.rhs[-c(37),]
+wisn.india <- wisn.rhs %>%
+  filter(ST == 'All India')
+df.rhs <- wisn.rhs 
+
+#Function for partial correlations 
+pcor_panel_y <- function(data, mapping, ...) {
+  ## remove x, y mapping
+  grp_aes <- mapping[setdiff(names(mapping), c("x", "y"))]
+  ## extract the columns to which x and y is mapped
+  xy <- sapply(mapping[c("x", "y")], rlang::as_name)
+  #Y#print(xy)
+  ## calculate pcor per group
+  stats_est <- data %>%
+    group_modify(function(dat, grp) {
+      res <- pcor(dat, method = 'spearman')$estimate %>%
+        as_tibble() %>%
+        setNames(names(dat)) ## needed b/c in pcor names are sometimes messed up
+      res <- res %>%
+        mutate(x = names(res)) %>%
+        gather(y, v_est, -x)
+      res %>%
+        filter(x == xy[1], y == xy[2]) ## look only at the pcors of this panel
+    }) %>%
+    mutate(x = 1, y = seq_along(y))
+  # -
+  stats_p <- data %>%
+    group_modify(function(dat, grp) {
+      res <- pcor(dat, method = 'spearman')$p.value %>%
+        as_tibble() %>%
+        setNames(names(dat)) ## needed b/c in pcor names are sometimes messed up
+      res <- res %>%
+        mutate(x = names(res)) %>%
+        gather(y, v_p, -x)
+      res %>%
+        filter(x == xy[1], y == xy[2]) ## look only at the pcors of this panel
+    }) %>%
+    mutate(x = 1, y = seq_along(y))
+  # -
+  stats_s <- data %>%
+    group_modify(function(dat, grp) {
+      res <- pcor(dat, method = 'spearman')$statistic %>%
+        as_tibble() %>%
+        setNames(names(dat)) ## needed b/c in pcor names are sometimes messed up
+      res <- res %>%
+        mutate(x = names(res)) %>%
+        gather(y, v_stat, -x)
+      res %>%
+        filter(x == xy[1], y == xy[2]) ## look only at the pcors of this panel
+    }) %>%
+    mutate(x = 1, y = seq_along(y))
+  # -
+  #stats <- cbind(stats_est, stats_p)#, stats_s)
+  stats <- stats_est %>% right_join(stats_p)
+  print(stats)
+  val_est <- paste("ρ (rho) = ",round(stats$v_est, 3))
+  val_p <- paste("p = ",(format.pval(round(stats$v_p ,3), eps = .001, digits = 3)))
+  #val_label <- paste(val_est, val_p, sep = "\n")
+  #print(val_label)
+  ggplot(stats, aes(x, y,
+             label = paste(val_est, val_p, sep = "\n")
+             )
+         ) +
+    geom_text(grp_aes) +
+    ylim(range(stats$y) + c(-2, 2))
+}
+
+
+#PHC workload correlations
+phc_wisn_states <- wisn.states %>%
+  dplyr::select(NURSE_PHC_R_P_WISN_ratio, DOC_PHC_R_P_WISN_ratio) %>%
+  rename('PHC-Nurses WISN Ratio' = NURSE_PHC_R_P_WISN_ratio, 
+         'PHC-Doctors WISN Ratio' = DOC_PHC_R_P_WISN_ratio) %>%
+  na.omit()
+
+phc_wisn_ratio_corrs <- ggpairs(phc_wisn_states, 
+                                upper = list(continuous = pcor_panel_y), 
+                                diag = list(continuous = wrap(ggally_barDiag, binwidth = 0.04))) +
+  theme_bw()
+
+ggsave("../analysis/phc_wisn_ratio_corrs.png", phc_wisn_ratio_corrs, device = 'png', dpi = 300, width = 4, height = 4)
+
+#CHC workload correlations
+chc_wisn_states <- wisn.states %>%
+  dplyr::select(NURSE_CHC_R_P_WISN_ratio, PAED_CHC_R_P_WISN_ratio, 
+         OBGY_CHC_R_P_WISN_ratio, PHY_CHC_R_P_WISN_ratio,
+         SUR_CHC_R_P_WISN_ratio, GDMO_AL_CHC_R_P_WISN_ratio) %>%
+  rename('CHC-Nurses WISN Ratio' = NURSE_CHC_R_P_WISN_ratio, 
+         'CHC-Paediatricians WISN Ratio' = PAED_CHC_R_P_WISN_ratio, 
+         'CHC-OBGYNs WISN Ratio' = OBGY_CHC_R_P_WISN_ratio, 
+         'CHC-Physicians WISN Ratio' = PHY_CHC_R_P_WISN_ratio, 
+          'CHC-Surgeons WISN Ratio' = SUR_CHC_R_P_WISN_ratio,
+          'CHC-GDMOs WISN Ratio' = GDMO_AL_CHC_R_P_WISN_ratio) %>%
+  na.omit()
+
+#Partial correlations
+pcor_chc_wisn_ratio <- pcor(chc_wisn_states, method = 'spearman')
+
+chc_wisn_ratio_corrs <- ggpairs(chc_wisn_states, 
+                                upper = list(continuous = pcor_panel_y), 
+                                diag = list(continuous = wrap(ggally_barDiag, binwidth = 0.04))) + theme_bw()
+
+ggsave("../analysis/chc_wisn_ratio_corrs.png", chc_wisn_ratio_corrs, device = 'png', dpi = 300, width = 12, height = 12)
+```
+
+
+``````{r RHS-WISN post-analysis @Siddhesh}
+#Sanctioning-WISN Lin's correlations
+nurse_phc_sanc <- DescTools::CCC(wisn.states$NURSE_PHC_R_S, wisn.states$NURSE_PHC_R_WISN, na.rm = T)
+doc_phc_sanc <- DescTools::CCC(wisn.states$DOC_PHC_R_S, wisn.states$DOC_PHC_R_WISN, na.rm = T)
+nurse_chc_sanc <- DescTools::CCC(wisn.states$NURSE_CHC_R_S, wisn.states$NURSE_CHC_R_WISN, na.rm = T)
+gdmo_chc_sanc <- DescTools::CCC(wisn.states$GDMO_AL_CHC_R_S, wisn.states$GDMO_AL_CHC_R_WISN, na.rm = T)
+phys_chc_sanc <- DescTools::CCC(wisn.states$PHY_CHC_R_S, wisn.states$PHY_CHC_R_WISN, na.rm = T)
+surg_chc_sanc <- DescTools::CCC(wisn.states$SUR_CHC_R_S, wisn.states$SUR_CHC_R_WISN, na.rm = T)
+obgyn_chc_sanc <- DescTools::CCC(wisn.states$OBGY_CHC_R_S, wisn.states$OBGY_CHC_R_WISN, na.rm = T)
+paed_chc_sanc <- DescTools::CCC(wisn.states$PAED_CHC_R_S, wisn.states$PAED_CHC_R_WISN, na.rm = T)
+
+df.ccc <- data.frame(check.names = F,
+  'Centre-Cadre Combination' = c('PHC-Nurses', 'PHC-Doctors', 'CHC-Nurses', 'CHC-GDMOs', 
+                     'CHC-Physicians', 'CHC-Surgeons', 'CHC-OBGYNs', 'CHC-Paediatricians'),
+  'N' = c(nrow(nurse_phc_sanc$blalt), nrow(doc_phc_sanc$blalt), nrow(nurse_chc_sanc$blalt), 
+          nrow(gdmo_chc_sanc$blalt), nrow(phys_chc_sanc$blalt), nrow(surg_chc_sanc$blalt),
+          nrow(obgyn_chc_sanc$blalt), nrow(paed_chc_sanc$blalt)),
+  'R_C [95% CI]' = c(paste0(round(nurse_phc_sanc$rho.c$est, 2),' [',round(nurse_phc_sanc$rho.c$lwr.ci, 2),", ",round(nurse_phc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(doc_phc_sanc$rho.c$est, 2),' [',round(doc_phc_sanc$rho.c$lwr.ci, 2),", ",round(doc_phc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(nurse_chc_sanc$rho.c$est, 2),' [',round(nurse_chc_sanc$rho.c$lwr.ci, 2),", ",round(nurse_chc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(gdmo_chc_sanc$rho.c$est, 2),' [',round(gdmo_chc_sanc$rho.c$lwr.ci, 2),", ",round(gdmo_chc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(phys_chc_sanc$rho.c$est, 2),' [',round(phys_chc_sanc$rho.c$lwr.ci, 2),", ",round(phys_chc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(surg_chc_sanc$rho.c$est, 2),' [',round(surg_chc_sanc$rho.c$lwr.ci, 2),", ",round(surg_chc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(obgyn_chc_sanc$rho.c$est, 2),' [',round(obgyn_chc_sanc$rho.c$lwr.ci, 2),", ",round(obgyn_chc_sanc$rho.c$upr.ci, 2),"]"),
+                     paste0(round(paed_chc_sanc$rho.c$est, 2),' [',round(paed_chc_sanc$rho.c$lwr.ci, 2),", ",round(paed_chc_sanc$rho.c$upr.ci, 2),"]")), 
+  "Bias Correction Factor" = c(round(nurse_phc_sanc$C.b, 2), round(doc_phc_sanc$C.b, 2), 
+                               round(nurse_chc_sanc$C.b, 2), round(gdmo_chc_sanc$C.b, 2),
+                               round(phys_chc_sanc$C.b, 2), round(surg_chc_sanc$C.b, 2), 
+                               round(obgyn_chc_sanc$C.b, 2), round(paed_chc_sanc$C.b, 2)))
+
+write.csv(df.ccc, "../analysis/df_ccc_sanc_wisn.csv")
+```
+
+``````{r previous extra @Siddhesh}
+phc_nurse <- ggscatter(wisn.states, x = 'NURSE_PHC_R_S_WISN_diff_per_centre', y = 'NURSE_PHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for PHC-Nurses', ylab = 'WISN Diff. per-centre for PHC-Nurses', color = 'red3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho', label.x = -1, label.y = -2) + theme_bw()
+
+phc_doc <- ggscatter(wisn.states, x = 'DOC_PHC_R_S_WISN_diff_per_centre', y = 'DOC_PHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for PHC-Doctors', ylab = 'WISN Diff. per-centre for PHC-Doctors', color = 'red3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_nurse <- ggscatter(wisn.states, x = 'NURSE_CHC_R_S_WISN_diff_per_centre', y = 'NURSE_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-Nurses', ylab = 'WISN Diff. per-centre for CHC-Nurses', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_gdmo <- ggscatter(wisn.states, x = 'GDMO_AL_CHC_R_S_WISN_diff_per_centre', y = 'GDMO_AL_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-GDMOs', ylab = 'WISN Diff. per-centre for CHC-GDMOs', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_phys <- ggscatter(wisn.states, x = 'PHY_CHC_R_S_WISN_diff_per_centre', y = 'PHY_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-Physicians', ylab = 'WISN Diff. per-centre for CHC-Physicians', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_surg <- ggscatter(wisn.states, x = 'SUR_CHC_R_S_WISN_diff_per_centre', y = 'SUR_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-Surgeons', ylab = 'WISN Diff. per-centre for CHC-Surgeons', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_obgyn <- ggscatter(wisn.states, x = 'OBGY_CHC_R_S_WISN_diff_per_centre', y = 'OBGY_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-OBGYNs', ylab = 'WISN Diff. per-centre for CHC-OBGYNs', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+chc_paed <- ggscatter(wisn.states, x = 'PAED_CHC_R_S_WISN_diff_per_centre', y = 'PAED_CHC_R_P_WISN_diff_per_centre', xlab = 'Sanctioning Diff. per-centre for CHC-Paediatricians', ylab = 'WISN Diff. per-centre for CHC-Paeditricians', color = 'blue3') + stat_cor(method = "spearman", r.accuracy = 0.01, p.accuracy = 0.001, p.digits = 3, r.digits = 3, cor.coef.name = 'rho') + theme_bw()
+
+sanc_diff_corr_panel <- cowplot::plot_grid(phc_nurse, phc_doc, 
+                                     chc_nurse, chc_gdmo, 
+                                     chc_phys, chc_surg, 
+                                     chc_obgyn, chc_paed, labels = "AUTO", nrow = 2)
+
+ggsave("../analysis/sanc_WISN_diff_corr_panel.png", sanc_diff_corr_panel, device = 'png', 
+       dpi = 300, width = 15, height = 8)
+
+```
+

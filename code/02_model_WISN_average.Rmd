@@ -1,0 +1,404 @@
+---
+title: "WISN Model"
+author: "Siddhesh Zadey"
+date: "18/12/2020"
+output: html_document
+---
+# Workforce problems at rural public health-centres in India: A WISN retrospective analysis and national-level modelling study
+# ASAR
+
+Modelling WISN average using GEE
+
+``````{r @Siddhesh}
+#Get packages
+library(geepack)
+library(tidyverse)
+library(ggplot2)
+library(ggstatsplot)
+library(broom)
+library(doBy)
+library(emmeans)
+library(data.table)
+library(stringr)
+library(forcats)
+library(GGally)
+library(ggpubr)
+library(cowplot)
+library(pastecs)
+library(ppcor)
+library(corrplot)
+library(yardstick)
+library(DescTools)
+```
+
+``````{r data wrangling @Siddhesh}
+#Get data
+df.wisn.initial<- read.csv("../analysis/Data_WISN_ABCE_raw.csv") 
+
+#Recoding semi/peri-urban to rural
+df.wisn <- df.wisn.initial %>%
+  mutate(Region = case_when(
+    Area == "Rural" | Area == "Semi/Peri-Urban" ~ "rural",
+    Area == "Urban" ~ "urban"
+  ))
+
+#Ordering the Year column for all centres
+df.wisn <- df.wisn[order(df.wisn$customid, df.wisn$Year),]
+
+#Filtering for rural, PHCs and CHCs
+df.wisn <- df.wisn %>%
+  filter(Region == 'rural') %>%
+  filter(Facility %in% c("Community Health Centre (CHC)", "Primary Health Centre (PHC)"))
+
+#Drop the case with 0
+df.wisn <- df.wisn[!(df.wisn$WISN==0),]
+
+#WISN rounding function 
+wisn_rounding <- function(dcol){
+  ifelse (dcol > 5, round(dcol),
+          ifelse(dcol < 1, 1,
+                 ifelse((dcol %% floor(dcol)) > 0.1 * floor(dcol), ceiling(dcol), floor(dcol))))
+  }
+
+df.wisn$WISN_round <- wisn_rounding(df.wisn$WISN)
+
+#Factorize leveled-columns
+df.wisn$Cadre <- as.factor(df.wisn$Cadre)
+df.wisn$Facility <- as.factor(df.wisn$Facility)
+df.wisn$Year <- as.factor(df.wisn$Year)
+df.wisn$Region <- as.factor(df.wisn$Region)
+
+#Remove TN nurses at CHC and PHC
+df.wisn <- df.wisn %>%
+  filter(!(State == 'TN' & Cadre == 'Nurses'))
+
+
+#Create cadre-centre dataframes
+wisn.split <- split(df.wisn, interaction(df.wisn$Cadre, df.wisn$Facility), drop = TRUE)
+cadres <- list(GDMO_CHC = wisn.split$`Medical officer.Community Health Centre (CHC)`,
+              Doctor_PHC = wisn.split$`Medical officer.Primary Health Centre (PHC)`,
+              Nurse_CHC = wisn.split$`Nurses.Community Health Centre (CHC)`, 
+              Nurse_PHC = wisn.split$`Nurses.Primary Health Centre (PHC)`,
+              Phys_CHC = wisn.split$`Medical specialist.Community Health Centre (CHC)`,
+              Surg_CHC = wisn.split$`Surgery specialist.Community Health Centre (CHC)`,
+             OBGYN_CHC = wisn.split$`O and G specialist.Community Health Centre (CHC)`,
+             Paed_CHC = wisn.split$`Paedistrician.Community Health Centre (CHC)`)
+
+#Data frame for exploratory analysis  
+df.wisn.exp <- bind_rows(cadres, .id = "Cadre_Centre")
+df.wisn.exp$X <- NULL
+df.wisn.exp <- df.wisn.exp %>%
+  dplyr::select(customid, 
+         State, Year, Area, Region, Cadre, Facility, Cadre_Centre, 
+         HSA, CAF, IAF, WISN, WISN_round)
+colnames(df.wisn.exp)[1] <- 'ABCE Facility ID'
+
+#Saving frame to file
+write.csv(df.wisn.exp, "../analysis/Data_WISN_ABCE_Final.csv")
+
+#Getting state-year counts for cadres
+df_counts <- function(df) {
+  tab <- table(df$Year, df$State)
+  tab[tab == 0] <- '-'
+  return(tab)
+}
+counts_cadres <- lapply(cadres, df_counts)
+
+#Saving frames to files
+list2env(counts_cadres, envir = .GlobalEnv)
+mapply(write.csv, counts_cadres, file=paste0(names(counts_cadres), "../analysis/data_counts.csv"))
+```
+
+``````{r exploration @Siddhesh}
+#Data exploration
+#Between states differences
+Bet_states_PHC_cadres<- 
+  df.wisn.exp %>% 
+  dplyr::mutate('Centre_Cadre' = case_when(
+    `Cadre_Centre` == "GDMO_CHC" ~ "CHC-GDMOs",
+    `Cadre_Centre` == "Nurse_CHC" ~ "CHC-Nurses",
+    `Cadre_Centre` == "Phys_CHC" ~ "CHC-Physicians",
+    `Cadre_Centre` == "Surg_CHC" ~ "CHC-Surgeons",
+    `Cadre_Centre` == "Paed_CHC" ~ "CHC-Paediatricians",
+    `Cadre_Centre` == "OBGYN_CHC" ~ "CHC-OBGYNs",
+    `Cadre_Centre` == "Doctor_PHC" ~ "PHC-Doctors",
+    `Cadre_Centre` == "Nurse_PHC" ~ "PHC-Nurses")) %>%
+  dplyr::filter(.data = ., df.wisn.exp$Facility == "Primary Health Centre (PHC)") %>%
+  ggstatsplot::grouped_ggbetweenstats(
+    data = .,
+    x = State,
+    y = WISN,
+    grouping.var = Centre_Cadre,
+    xlab = "States",
+    ylab = "WISN values (unrounded)",
+    type = 'np',
+    pairwise.display = "significant", # display only significant pairwise comparisons
+    p.adjust.method = "holm", # adjust p-values for multiple tests using this method
+    ggtheme = theme_bw(),
+    package = "ggsci",
+    palette = "default_aaas",
+    outlier.tagging = F,
+    ggstatsplot.layer = FALSE,
+    #outlier.label = `ABCE Facility ID`,
+    title.prefix = "Centre-Cadre",
+    plotgrid.args = list(ncol = 2))
+
+ggsave("../analysis/PHC_cadres_between_states.png", Bet_states_PHC_cadres, device = "png", dpi = 300, width = 16, height = 8)
+
+Bet_states_CHC_cadres<- 
+  df.wisn.exp %>%
+  dplyr::mutate('Centre_Cadre' = case_when(
+    `Cadre_Centre` == "GDMO_CHC" ~ "CHC-GDMOs",
+    `Cadre_Centre` == "Nurse_CHC" ~ "CHC-Nurses",
+    `Cadre_Centre` == "Phys_CHC" ~ "CHC-Physicians",
+    `Cadre_Centre` == "Surg_CHC" ~ "CHC-Surgeons",
+    `Cadre_Centre` == "Paed_CHC" ~ "CHC-Paediatricians",
+    `Cadre_Centre` == "OBGYN_CHC" ~ "CHC-OBGYNs",
+    `Cadre_Centre` == "Doctor_PHC" ~ "PHC-Doctors",
+    `Cadre_Centre` == "Nurse_PHC" ~ "PHC-Nurses")) %>%
+  dplyr::filter(.data = ., df.wisn.exp$Facility == "Community Health Centre (CHC)") %>%
+  ggstatsplot::grouped_ggbetweenstats(
+    data = .,
+    x = State,
+    y = WISN,
+    grouping.var = Centre_Cadre,
+    xlab = "States",
+    ylab = "WISN values (unrounded)",
+    type = 'np',
+    pairwise.display = "significant", # display only significant pairwise comparisons
+    p.adjust.method = "holm", # adjust p-values for multiple tests using this method
+    ggtheme = theme_bw(),
+    package = "ggsci",
+    palette = "default_aaas",
+    outlier.tagging = F,
+    ggstatsplot.layer = FALSE,
+    #outlier.label = `ABCE Facility ID`,
+    title.prefix = "Centre-Cadre",
+    plotgrid.args = list(nrow = 2, ncol = 3))
+
+ggsave("../analysis/CHC_cadres_between_states.png", Bet_states_CHC_cadres, device = "png", dpi = 300, width = 30, height = 16)
+
+```
+
+``````{r Modeling for average WISN @Siddhesh}
+#We use Generalized Estimating Equations (GEE) to calculate population-averaged effects for urban and rural situated centres, taking into account correlations due to state and years. Here, we fit the Poisson distributions with log-links, considering rounded-up WISN count values.    
+
+#Model for average WISN-based need 
+model.fit <- function (df){
+ fit.ex <- geeglm(WISN_round ~ State + Year, 
+                              id = customid, 
+                              family = poisson(), 
+                              corstr = 'exchangeable',
+                              data = df)
+ fit.ind <- geeglm(WISN_round ~ State + Year, 
+                              id = customid, 
+                              family = poisson(), 
+                              corstr = 'independence',
+                              data = df)
+ fit.ar <- geeglm(WISN_round ~ State + Year, 
+                              id = customid, 
+                              family = poisson(), 
+                              corstr = 'ar1',
+                              data = df)
+ pred.ex <- data.frame(summary(emmeans(fit.ex, ~ 1, type = "response")))
+ pred.ind <- data.frame(summary(emmeans(fit.ind, ~ 1, type = "response")))
+ pred.ar <- data.frame(summary(emmeans(fit.ar, ~ 1, type = "response")))
+ pred.ex$QIC <- geepack::QIC(fit.ex)[1]
+ pred.ind$QIC <- geepack::QIC(fit.ind)[1]
+ pred.ar$QIC <- geepack::QIC(fit.ar)[1]
+ pred <- dplyr::bind_rows(list(fit.ex = pred.ex, fit.ind = pred.ind, fit.ar = pred.ar), .id ='source')
+ df.fit <- pred %>%
+  filter(QIC == min(QIC)) 
+ num<- count(df)
+ df.fit$n <- num$n 
+ return(df.fit)
+}
+
+#Fitting models to cadres (ALL RURAL)
+GDMO_CHC <- model.fit(cadres$GDMO_CHC)
+DOC_PHC <- model.fit(cadres$Doctor_PHC) 
+NURSE_CHC <- model.fit(cadres$Nurse_CHC)
+NURSE_PHC <- model.fit(cadres$Nurse_PHC) 
+PHY_CHC <- model.fit(cadres$Phys_CHC)
+SUR_CHC <- model.fit(cadres$Surg_CHC)
+OBGY_CHC <- model.fit(cadres$OBGYN_CHC)
+PAED_CHC <- model.fit(cadres$Paed_CHC)
+
+#Final dataframe for mean WISN values
+df.cadrecentres <- dplyr::bind_rows(list(GDMO_CHC = GDMO_CHC,
+                                    NURSE_CHC = NURSE_CHC,
+                                    PHY_CHC = PHY_CHC,
+                                    SUR_CHC = SUR_CHC,
+                                    PAED_CHC = PAED_CHC,
+                                    OBGY_CHC = OBGY_CHC,
+                                    DOC_PHC = DOC_PHC,
+                                    NURSE_PHC = NURSE_PHC),
+                                    .id = 'cadre_centre')
+
+df.cadrecentres <- setnames(df.cadrecentres, old = c('source', 'rate', 'asymp.LCL', 'asymp.UCL'), 
+         new = c('GEE correlation structure', 'Mean WISN-based need', 'Lower 95% CI', 'Upper 95% CI'))
+df.means <- df.cadrecentres %>%
+  dplyr::mutate('Working Correlation Matrix (GEE)'  = case_when(
+    `GEE correlation structure` == 'fit.ar' ~ 'auto-correlation',
+    `GEE correlation structure` == 'fit.ind' ~ 'independence',
+    `GEE correlation structure` == 'fit.ex' ~ 'exchangeable')) %>%
+  separate(cadre_centre, into = c('Cadre', 'Centre'), sep = '_')
+df.means$`Centre-Cadre` <- paste(df.means$Centre, df.means$Cadre, sep = '-')
+df.means <- df.means %>%
+  dplyr::mutate('Centre-Cadre comb.' = case_when(
+    `Centre-Cadre` == "CHC-GDMO" ~ "CHC-GDMOs",
+    `Centre-Cadre` == "CHC-NURSE" ~ "CHC-Nurses",
+    `Centre-Cadre` == "CHC-PHY" ~ "CHC-Physicians",
+    `Centre-Cadre` == "CHC-SUR" ~ "CHC-Surgeons",
+    `Centre-Cadre` == "CHC-PAED" ~ "CHC-Paediatricians",
+    `Centre-Cadre` == "CHC-OBGY" ~ "CHC-OBGYNs",
+    `Centre-Cadre` == "PHC-DOC" ~ "PHC-Doctors",
+    `Centre-Cadre` == "PHC-NURSE" ~ "PHC-Nurses"))
+df.means$`Mean WISN-based need (rounded)` <- wisn_rounding(df.means$`Mean WISN-based need`)
+df.means$`Lower 95% CI (rounded)` <- wisn_rounding(df.means$`Lower 95% CI`)
+df.means$`Upper 95% CI (rounded)` <- wisn_rounding(df.means$`Upper 95% CI`)
+drops <- c('X1', 'df', 'GEE correlation structure', 'Centre-Cadre')
+df.means <- df.means[, !(names(df.means) %in% drops)]
+df.means <- df.means %>%
+  rename(`Centre-Cadre` = `Centre-Cadre comb.`) %>%
+  dplyr::select(Cadre, Centre, `Centre-Cadre`, n, 
+         `Mean WISN-based need`, SE,
+         `Lower 95% CI`, `Upper 95% CI`,
+         QIC, `Mean WISN-based need (rounded)`,
+         `Lower 95% CI (rounded)`, `Upper 95% CI (rounded)`,
+         `Working Correlation Matrix (GEE)`)
+
+#Saving frame to file
+write.csv(df.means, '../analysis/Data_WISN_means.csv')
+
+mean_wisn_plot <- 
+  ggplot(df.means, aes(x= `Mean WISN-based need (rounded)`, y=`Centre-Cadre`)) + 
+  geom_point(size = 5, shape = 124, color = "red") + geom_pointrange(aes(xmin=`Lower 95% CI`, xmax=`Upper 95% CI (rounded)`), shape = 124, size = 0.5) +
+  theme_ggstatsplot() +
+  theme(legend.position = "none") +
+  xlab("WISN-based requirement values (rounded)") + 
+  ylab("HRH Centre-Cadre combinations")
+
+ggsave("../analysis/WISN_modeled_means.png", mean_wisn_plot, device = "png", dpi = 300, width = 8, height = 5)
+```
+
+``````{r Modeling for average WISN wihtout TN @Siddhesh}
+#Without TN
+df.wisn_TN_removed <- df.wisn %>%
+  filter(!(State == 'TN'))
+
+#Create cadre-centre dataframes
+wisn.split_TN_removed <- split(df.wisn_TN_removed, interaction(df.wisn_TN_removed$Cadre, df.wisn_TN_removed$Facility), drop = TRUE)
+cadres_TN_removed <- list(GDMO_CHC = wisn.split_TN_removed$`Medical officer.Community Health Centre (CHC)`,
+              Doctor_PHC = wisn.split_TN_removed$`Medical officer.Primary Health Centre (PHC)`,
+              Nurse_CHC = wisn.split_TN_removed$`Nurses.Community Health Centre (CHC)`, 
+              Nurse_PHC = wisn.split_TN_removed$`Nurses.Primary Health Centre (PHC)`,
+              Phys_CHC = wisn.split_TN_removed$`Medical specialist.Community Health Centre (CHC)`,
+              Surg_CHC = wisn.split_TN_removed$`Surgery specialist.Community Health Centre (CHC)`,
+             OBGYN_CHC = wisn.split_TN_removed$`O and G specialist.Community Health Centre (CHC)`,
+             Paed_CHC = wisn.split_TN_removed$`Paedistrician.Community Health Centre (CHC)`)
+  
+
+GDMO_CHC_TN_removed <- model.fit(cadres_TN_removed$GDMO_CHC)
+DOC_PHC_TN_removed <- model.fit(cadres_TN_removed$Doctor_PHC) 
+NURSE_CHC_TN_removed <- model.fit(cadres_TN_removed$Nurse_CHC)
+NURSE_PHC_TN_removed <- model.fit(cadres_TN_removed$Nurse_PHC) 
+PHY_CHC_TN_removed <- model.fit(cadres_TN_removed$Phys_CHC)
+SUR_CHC_TN_removed <- model.fit(cadres_TN_removed$Surg_CHC)
+OBGY_CHC_TN_removed <- model.fit(cadres_TN_removed$OBGYN_CHC)
+PAED_CHC_TN_removed <- model.fit(cadres_TN_removed$Paed_CHC)
+
+#Final dataframe for mean WISN values
+df.cadrecentres_TN_removed <- dplyr::bind_rows(list(GDMO_CHC = GDMO_CHC_TN_removed,
+                                    NURSE_CHC = NURSE_CHC_TN_removed,
+                                    PHY_CHC = PHY_CHC_TN_removed,
+                                    SUR_CHC = SUR_CHC_TN_removed,
+                                    PAED_CHC = PAED_CHC_TN_removed,
+                                    OBGY_CHC = OBGY_CHC_TN_removed,
+                                    DOC_PHC = DOC_PHC_TN_removed,
+                                    NURSE_PHC = NURSE_PHC_TN_removed),
+                                    .id = 'cadre_centre')
+
+df.cadrecentres_TN_removed <- setnames(df.cadrecentres_TN_removed, old = c('source', 'rate', 'asymp.LCL', 'asymp.UCL'), 
+         new = c('GEE correlation structure', 'Mean WISN-based need', 'Lower 95% CI', 'Upper 95% CI'))
+df.means_TN_removed <- df.cadrecentres_TN_removed %>%
+  dplyr::mutate('Working Correlation Matrix (GEE)'  = case_when(
+    `GEE correlation structure` == 'fit.ar' ~ 'auto-correlation',
+    `GEE correlation structure` == 'fit.ind' ~ 'independence',
+    `GEE correlation structure` == 'fit.ex' ~ 'exchangeable')) %>%
+  separate(cadre_centre, into = c('Cadre', 'Centre'), sep = '_')
+df.means_TN_removed$`Centre-Cadre` <- paste(df.means_TN_removed$Centre, df.means_TN_removed$Cadre, sep = '-')
+df.means_TN_removed <- df.means_TN_removed %>%
+  dplyr::mutate('Centre-Cadre comb.' = case_when(
+    `Centre-Cadre` == "CHC-GDMO" ~ "CHC-GDMOs",
+    `Centre-Cadre` == "CHC-NURSE" ~ "CHC-Nurses",
+    `Centre-Cadre` == "CHC-PHY" ~ "CHC-Physicians",
+    `Centre-Cadre` == "CHC-SUR" ~ "CHC-Surgeons",
+    `Centre-Cadre` == "CHC-PAED" ~ "CHC-Paediatricians",
+    `Centre-Cadre` == "CHC-OBGY" ~ "CHC-OBGYNs",
+    `Centre-Cadre` == "PHC-DOC" ~ "PHC-Doctors",
+    `Centre-Cadre` == "PHC-NURSE" ~ "PHC-Nurses"))
+df.means_TN_removed$`Mean WISN-based need (rounded)` <- wisn_rounding(df.means_TN_removed$`Mean WISN-based need`)
+df.means_TN_removed$`Lower 95% CI (rounded)` <- wisn_rounding(df.means_TN_removed$`Lower 95% CI`)
+df.means_TN_removed$`Upper 95% CI (rounded)` <- wisn_rounding(df.means_TN_removed$`Upper 95% CI`)
+drops <- c('X1', 'df', 'GEE correlation structure', 'Centre-Cadre')
+df.means_TN_removed <- df.means_TN_removed[, !(names(df.means_TN_removed) %in% drops)]
+df.means_TN_removed <- df.means_TN_removed %>%
+  rename(`Centre-Cadre` = `Centre-Cadre comb.`) %>%
+  dplyr::select(Cadre, Centre, `Centre-Cadre`, n, 
+         `Mean WISN-based need`, SE,
+         `Lower 95% CI`, `Upper 95% CI`,
+         QIC, `Mean WISN-based need (rounded)`,
+         `Lower 95% CI (rounded)`, `Upper 95% CI (rounded)`,
+         `Working Correlation Matrix (GEE)`)
+
+
+#Saving frame to file
+write.csv(df.means_TN_removed, "../analysis/Data_WISN_means_TN_removed.csv")
+```
+
+```{r some small things for manuscript}
+
+#Facility count
+df.wisn.exp %>%
+  distinct(`ABCE Facility ID`) %>%
+  count()
+
+#State-wise
+df.wisn.exp %>%
+  group_by(State) %>%
+  distinct(`ABCE Facility ID`) %>%
+  count()
+
+#Year-wise
+df.wisn.exp %>%
+  group_by(Year) %>%
+  distinct(`ABCE Facility ID`) %>%
+  count()
+
+#State-year wise
+df.wisn.exp %>%
+  group_by(State, Year) %>%
+  distinct(`ABCE Facility ID`) %>%
+  count()
+
+#Descriptives overall
+stat.desc(cadres$Nurse_PHC$WISN_round)
+stat.desc(cadres$Doctor_PHC$WISN_round)
+stat.desc(cadres$Nurse_CHC$WISN_round)
+stat.desc(cadres$GDMO_CHC$WISN_round)
+stat.desc(cadres$Phys_CHC$WISN_round)
+stat.desc(cadres$Surg_CHC$WISN_round)
+stat.desc(cadres$OBGYN_CHC$WISN_round)
+stat.desc(cadres$Paed_CHC$WISN_round)
+
+#Finding sanctioning diffs
+wisn.states.inter <- read.csv("../analysis/Data_RHS_WISN_comparision.csv")
+wisn.states.inter <- wisn.states.inter[-c(37),]
+wisn.states.inter %>%
+  filter(DOC_PHC_R_S_WISN_diff_per_centre_sanctioning_problem == "Under sanctioning") %>%
+  nrow()
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
