@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 reading_material
-analysis/maps
+#analysis/maps
 code/*.html
